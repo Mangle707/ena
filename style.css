@@ -1,0 +1,17 @@
+body {
+    
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container h1 {
+    text-align: center;
+    color:aliceblue;
+}
+.container p {
+    color:rgb(233, 214, 190);
+    text-align:center;
+}
