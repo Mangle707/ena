@@ -8,7 +8,9 @@
 <body>
     <?php
       echo "<h1>Loren</h1>";
-
+   echo "<p>Este é um exemplo simples de uma página construída apenas com HTML puro.</p>";
+    
+ 
 
         ?>
 </body>
