@@ -7,7 +7,8 @@
 </head>
 <body>
     <?php
-      echo "<h1>Loren</h1>";
+      $nome = "Sabrina";
+      echo "<h1>Ola, $nome </h1>";
    echo "<p>Este é um exemplo simples de uma página construída apenas com HTML puro.</p>";
     
  
