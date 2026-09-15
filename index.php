@@ -1,3 +1,20 @@
+<?php
+      $nome = "";
+      $idade = "";
+      $resultado = "";
+       
+      if($_SERVER["REQUEST_METHOD"] == "POST"){//o if esta perguntando se possui o metodo post no codigo
+        $nome = $_POST["nome"]; //reconhece o id dos forms para essa nova variavel
+        $idade = $_POST["idade"];
+        //calculo de idade
+            if ($idade >= 18){
+                 $maiorid = "Sim voce é"; //nova variavel para calcular sua idade
+               }
+            else {
+                $maiorid = "Nao é";
+               }
+    }
+        ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,30 +25,39 @@
 </head>
 <body>
     <?php
-      $nome = "Sabrina";
-      $idade = 19;
-           
-      if ($idade >= 18){
-        $maiorid = "Sim voce é"; //nova variavel para calcular sua idade
-      }
-      else {
-        $maiorid = "Nao é";
-      }
+      $nome = "";
+      $idade = "";
+      $resultado = "";
+       
+      if($_SERVER["REQUEST_METHOD"] == "POST"){//o if esta perguntando se possui o metodo post no codigo
+        $nome = $_POST["nome"]; //reconhece o id dos forms para essa nova variavel
+        $idade = $_POST["idade"];
+        //calculo de idade
+            if ($idade >= 18){
+                 $maiorid = "Sim voce é"; //nova variavel para calcular sua idade
+               }
+            else {
+                $maiorid = "Nao é";
+               }
+    }
         ?>
-        <div classname=container>
+        
+        <div class=container>
         <h1>Nome: <?= $nome ?></h1>
         <h1>Idade: <?= $idade ?></h1>
         <hr>
         <p>E maior de idade? <?= $maiorid ?></p>
         </div>
 
-        <form class="Formulario" action="Forms" method="POST">
+        <form class="Formulario" action="" method="POST">
           <label for= "nome">Nome:</label>
-         <input type="text" name="nome" required>
+         <input type="text" id="nome" name="nome" required>
          <label for="idade">Idade:</label>
-         <input type="number" name="idade" required>
+         <input type="number" id="idade" name="idade" required>
 
          <button type="submit">Enviar</button>
         </form>
+        <?php if($resultado != "") { ?>
+         <?php } ?>
 </body>
 </html>

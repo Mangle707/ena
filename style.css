@@ -19,5 +19,6 @@ body {
     display:flex;
     background-color: aliceblue;
     color:black;
-    text-align:right;
+    text-align:center;
+    justify-content: right;
 }
