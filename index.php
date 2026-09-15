@@ -8,10 +8,10 @@
         $idade = $_POST["idade"];
         //calculo de idade
             if ($idade >= 18){
-                 $maiorid = "Sim voce é"; //nova variavel para calcular sua idade
+                 $resultado = "Sim voce é"; //nova variavel para calcular sua idade
                }
             else {
-                $maiorid = "Nao é";
+                $resultado = "Nao é";
                }
     }
         ?>
@@ -26,7 +26,7 @@
 <body>  
         
     <div class=container>
-           <form class="Formulario" action="" method="POST">
+           <form action="" method="POST">
             <label for= "nome">Nome:</label>
           <input type="text" id="nome" name="nome" required>
             <label for="idade">Idade:</label>
@@ -34,7 +34,7 @@
 
          <button type="submit">Enviar</button>
         </form>
-        <?php if($resultado != "") { ?>
+        <?php if ($resultado != "") { ?>
          
     <h1>Nome: <?= $nome ?></h1>
     <h1>Idade: <?= $idade ?></h1>

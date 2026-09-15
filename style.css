@@ -15,10 +15,3 @@ body {
     color:rgb(233, 214, 190);
     text-align:center;
 }
-.formulario {
-    display:flex;
-    background-color: aliceblue;
-    color:black;
-    text-align:center;
-    justify-content: right;
-}
