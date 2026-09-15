@@ -26,14 +26,15 @@
 <body>  
         
     <div class=container>
+           <div class=Forms>
            <form action="" method="POST">
             <label for= "nome">Nome:</label>
           <input type="text" id="nome" name="nome" required>
             <label for="idade">Idade:</label>
           <input type="number" id="idade" name="idade" required>
-
          <button type="submit">Enviar</button>
         </form>
+        </div>
         <?php if ($resultado != "") { ?>
          
     <h1>Nome: <?= $nome ?></h1>

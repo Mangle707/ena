@@ -11,9 +11,16 @@ body {
 .container{
     display:flex;
     text-align: center;
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     flex-direction: center;
-    background-color: aliceblue;
+    background-color: rgb(0, 0, 0);
     align-items: center;
+    flex-direction: column;
+    padding: 30%;
+    border: 2px #ffffff;
+}
+.Forms{
+    display:flex;
+    align-items: end;
     flex-direction: column;
 }
