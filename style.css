@@ -14,4 +14,6 @@ body {
     color:rgb(0, 0, 0);
     flex-direction: center;
     background-color: aliceblue;
+    align-items: center;
+    flex-direction: column;
 }
