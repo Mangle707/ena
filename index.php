@@ -58,7 +58,7 @@
          <button type="submit">Enviar</button>
         </form>
         <?php if($resultado != "") { ?>
-          echo "<h1>Seu Nome <?=$nome?>, Sua idade: <?= $idade?> </h1>"
+          <h1>Seu Nome <?=$nome?>, Sua idade: <?= $idade?> </h1>
          <?php } ?>
 </body>
 </html>
