@@ -1,5 +1,5 @@
 body {
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     background-color: #000000;
     display: flex;
     justify-content: center;
@@ -8,24 +8,27 @@ body {
     margin: 0;
 }
 
-.container{
-    display:flex;
+.container {
+    display: flex;
     text-align: center;
-    color:rgb(255, 255, 255);
-    flex-direction: center;
+    color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
     align-items: center;
     flex-direction: column;
-    padding: 30%;
+    padding: 40px; 
     border: 2px solid #ffffff;
     border-radius: 8px;
+    width: 320px; 
 }
-.Forms{
-    display:flex;
-    align-items: flex-end;
+
+.Forms {
+    display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-end; 
+    align-items: center;
     height: 200px;
-    border: 1px dashed #ccc;
+    width: 100%; 
     gap: 10px;
+    border: 2px solid #ccc; 
+    box-sizing: border-box; 
 }
