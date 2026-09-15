@@ -37,8 +37,8 @@
         </div>
         <?php if ($resultado != "") { ?>
          
-    <h1>Nome: <?= $nome ?></h1>
-    <h1>Idade: <?= $idade ?></h1>
+         <h1>Nome: <?= $nome ?></h1>
+         <h1>Idade: <?= $idade ?></h1>
         <hr>
         <p>E maior de idade? <?= $resultado ?></p>
     </div>
