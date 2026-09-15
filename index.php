@@ -24,5 +24,14 @@
         <hr>
         <p>E maior de idade? <?= $maiorid ?></p>
         </div>
+
+        <form class="Formulario" action="Forms" method="POST">
+          <label for= "nome">Nome:</label>
+         <input type="text" name="nome" required>
+         <label for="idade">Idade:</label>
+         <input type="number" name="idade" required>
+
+         <button type="submit">Enviar</button>
+        </form>
 </body>
 </html>
