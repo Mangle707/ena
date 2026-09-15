@@ -42,12 +42,6 @@
     }
         ?>
         
-        <div class=container>
-        <h1>Nome: <?= $nome ?></h1>
-        <h1>Idade: <?= $idade ?></h1>
-        <hr>
-        <p>E maior de idade? <?= $maiorid ?></p>
-        </div>
 
         <form class="Formulario" action="" method="POST">
           <label for= "nome">Nome:</label>
@@ -58,7 +52,12 @@
          <button type="submit">Enviar</button>
         </form>
         <?php if($resultado != "") { ?>
-          <h1>Seu Nome <?=$nome?>, Sua idade: <?= $idade?> </h1>
+          <div class=container>
+        <h1>Nome: <?= $nome ?></h1>
+        <h1>Idade: <?= $idade ?></h1>
+        <hr>
+        <p>E maior de idade? <?= $maiorid ?></p>
+        </div>
          <?php } ?>
 </body>
 </html>
