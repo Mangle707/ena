@@ -17,10 +17,10 @@
         //Calculo da media com pesos (pelo que eu entendi)
         $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3)) / 10;
         
-        if ($media >= 7){
+        if ($media >= 70){
             $resultado = "APROVADO";
         }
-        else if ($media >= 5){ // (Se não for maior que 7, mas for maior ou igual a 5)
+        else if ($media >= 50){ // (Se não for maior que 7, mas for maior ou igual a 5)
             $resultado = "RECUPERAÇÃO";
         }
         else {
@@ -41,25 +41,25 @@
         <div class="Forms">
             <form action="" method="GET"><!--trocado do POST para GET-->
                 <label for= "nome">Nome do aluno:</label>
-                <input type="text" id="nome" name="nome" required>
+                <input type="text" id="nome" min="0" max="100" name="nome" required>
 
                 <label for="nome"> Idade:</label>
-                <input type="number" id="idade" name="idade" required>
+                <input type="number" id="idade" min="0" max="100" name="idade" required>
 
                 <label for="nota1">Nota 1:</label>
-                <input type="number" id="nota1" name="nota1" required>
+                <input type="number" id="nota1" min="0" max="100" name="nota1" required>
                  
                 <label for="nota2">Nota 2:</label>
-                <input type="number" id="nota2" name="nota2" required>
+                <input type="number" id="nota2" min="0" max="100" name="nota2" required>
 
                 <label for="nota3">Nota 3:</label>
-                <input type="number" id="nota3" name="nota3" required>
+                <input type="number" id="nota3" min="0" max="100" name="nota3" required>
                 
                 <label for="nota4">Nota 4:</label>
-                <input type="number" id="nota4" name="nota4" required>
+                <input type="number" id="nota4" min="0" max="100" name="nota4" required>
 
                 <label for="nota5">Nota 5:</label>
-                 <input type="number" id="nota5" name="nota5" required>
+                 <input type="number" id="nota5" min="0" max="100" name="nota5" required>
 
                 <button type="submit">Enviar</button>
             </form>
