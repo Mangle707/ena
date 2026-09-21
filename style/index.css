@@ -1,7 +1,7 @@
 body {
     color: rgb(255, 255, 255);
     background-color: #000000;
-    background-image: url('./IMG/Background.webp');
+    background-image: url('../IMG/Background.webp'); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,28 +12,36 @@ body {
     margin: 0;
 }
 
-
-button {
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 5px;
-}
-
 ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center; 
     align-items: center;
     height: 200px;
-    width: 100%; 
-    gap: 10px;
-    border: 2px solid #ccc; 
+    width: 320px; 
+    gap: 15px; 
+    border: 2px solid #ffffff; 
+    background-color: rgba(0, 0, 0, 0.85); 
+    border-radius: 8px;
+    padding: 20px;
     box-sizing: border-box; 
-  }
-  li {
-    color:#ffffff;
-  }
+    list-style-type: none; 
+}
+
+li {
+    width: 85%; 
+    text-align: center;
+}
+
+
+li a {
+    display: block;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    text-decoration: none; 
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+}

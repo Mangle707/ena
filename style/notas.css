@@ -1,14 +1,14 @@
 body {
     color: rgb(255, 255, 255);
     background-color: #000000;
-    background-image: url('./IMG/Background.webp');
+    background-image: url('../IMG/Background.webp'); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; 
     margin: 0;
 }
 
@@ -16,7 +16,6 @@ body {
     display: flex;
     text-align: center;
     color: rgb(255, 255, 255);
-    /*muda o fundo para ficar semi-transparente*/
     background-color: rgba(0, 0, 0, 0.85); 
     align-items: center;
     flex-direction: column;
@@ -24,6 +23,7 @@ body {
     border: 2px solid #ffffff;
     border-radius: 8px;
     width: 320px; 
+    margin: 20px 0; 
 }
 
 .Forms {
@@ -31,19 +31,27 @@ body {
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-    height: 200px;
+    height: auto; 
+    padding: 10px 0;
     width: 100%; 
     gap: 10px;
     border: 2px solid #ccc; 
     box-sizing: border-box; 
-  }
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    width: 85%; 
+    gap: 8px; 
+}
 
 input {
     background-color: #000000;
     color: #ffffff;
     border: 1px solid #ffffff;
     padding: 6px;
-   }
+}
 
 button {
     background-color: #ffffff;
@@ -53,21 +61,23 @@ button {
     cursor: pointer;
     font-weight: bold;
     margin-top: 5px;
+    width: 100%;
 }
+
 .resultado {
     display: flex;
     flex-direction: column; 
     margin-top: 15px;
     gap: 5px;
-   }
-ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    height: 200px;
-    width: 100%; 
-    gap: 10px;
-    border: 2px solid #ccc; 
-    box-sizing: border-box; 
-  }
+    width: 100%;
+}
+
+.resultado h1 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.resultado p {
+    font-size: 16px;
+    font-weight: bold;
+}

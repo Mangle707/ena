@@ -35,7 +35,11 @@
           <input type="number" id="idade" name="idade" required>
          <button type="submit">Enviar</button>
         </form>
-        </div>
+
+        <form action="index.php" method="GET">
+            <button type="submit">Volte para o Menu Delta</button>
+         </form>
+    </div>
         <?php if ($resultado != "") { ?>
          
          <h1>Nome: <?= $nome ?></h1>
@@ -43,9 +47,7 @@
          <h1>Idade: <?= $idade ?></h1>
         <p>E maior de idade? <?= $resultado ?></p>
 
-        <form action="index.php" method="GET">
-            <button type="submit">Volte para o Menu Delta</button>
-         </form>
+       
     </div>
          <?php } ?>
 </body>

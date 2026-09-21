@@ -63,6 +63,9 @@
 
                 <button type="submit">Enviar</button>
             </form>
+            <form action="index.php" method="GET">
+            <button type="submit">Volte para o Menu Delta</button>
+         </form>
         </div>
         <?php if ($resultado != ""){?>
             <div class="resultado">
@@ -71,6 +74,8 @@
                 <h1>Média: <?= $media ?></h1>
                 <p>Atualmente: <?= $resultado ?></p>
             </div>
+
+
       <?php  } ?>
 </div>
 </body>
