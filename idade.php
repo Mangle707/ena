@@ -42,10 +42,11 @@
          <br>
          <h1>Idade: <?= $idade ?></h1>
         <p>E maior de idade? <?= $resultado ?></p>
-    </div>
-         <?php } ?>
-         <form action="idade.php" method="GET">
+
+        <form action="index.php" method="GET">
             <button type="submit">Volte para o Menu Delta</button>
          </form>
+    </div>
+         <?php } ?>
 </body>
 </html>
