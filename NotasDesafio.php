@@ -44,7 +44,7 @@
                 <input type="text" id="nome" min="0" max="10" name="nome" required>
 
                 <label for="nome"> Idade:</label>
-                <input type="number" id="idade" min="0" max="10" name="idade" required>
+                <input type="number" id="idade" min="0" max="150" name="idade" required>
 
                 <label for="nota1">Nota 1:</label>
                 <input type="number" id="nota1" min="0" max="10" name="nota1" required>
