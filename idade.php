@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade idade(1)</title>
      <link rel="stylesheet" href="style/idade.css">
-     <img src="style/IMG/Background.webp" width="500">
+    
 </head>
 <body>  
         
