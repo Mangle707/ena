@@ -1,0 +1,82 @@
+body {
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    background-image: url('./IMG/Background.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    /*muda o fundo para ficar semi-transparente*/
+    background-color: rgba(0, 0, 0, 0.85); 
+    align-items: center;
+    flex-direction: column;
+    padding: 40px; 
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    width: 320px; 
+}
+
+.Forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    height: 200px;
+    width: 100%; 
+    gap: 10px;
+    border: 2px solid #ccc; 
+    box-sizing: border-box; 
+  }
+
+
+
+form {
+    display: flex;
+    flex-direction: column; 
+    width: 85%; 
+    gap: 8px; 
+}
+
+input {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 6px;
+   }
+
+button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.resultado {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 15px;
+    gap: 5px;
+   }
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    height: 200px;
+    width: 100%; 
+    gap: 10px;
+    border: 2px solid #ccc; 
+    box-sizing: border-box; 
+  }

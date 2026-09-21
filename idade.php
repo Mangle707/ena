@@ -44,5 +44,6 @@
         <p>E maior de idade? <?= $resultado ?></p>
     </div>
          <?php } ?>
+         <button href="idade.php">Volte para o Menu Delta</button>
 </body>
 </html>
