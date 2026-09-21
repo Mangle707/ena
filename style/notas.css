@@ -16,10 +16,10 @@ body {
     display: flex;
     text-align: center;
     color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0); /* Preto puro como no Undertale */
+    background-color: rgb(0, 0, 0); 
     align-items: center;
     flex-direction: column;
-    padding: 30px; 
+    padding: 15px; 
     border: 6px solid #ffffff;
     border-radius: 0px; 
     width: 550px; 
@@ -27,6 +27,7 @@ body {
     margin: 20px auto; 
     box-sizing: border-box;
     font-family: "Courier New", Courier, monospace;
+    overflow-y: auto; 
 }
 
 .Forms {
@@ -34,53 +35,56 @@ body {
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-    height: auto; 
-    padding: 10px 0;
     width: 100%; 
-    gap: 10px;
-    border: 2px solid #ccc; 
     box-sizing: border-box; 
 }
 
 form {
     display: flex;
     flex-direction: column; 
-    width: 85%; 
-    gap: 8px; 
+    width: 90%; 
+    gap: 4px; 
+}
+
+label {
+    font-size: 13px; 
+    margin-top: 2px;
 }
 
 input {
     background-color: #000000;
     color: #ffffff;
     border: 1px solid #ffffff;
-    padding: 6px;
+    padding: 4px; /* Input mais compacto */
+    font-size: 13px;
 }
 
 button {
     background-color: #ffffff;
     color: #000000;
     border: none;
-    padding: 8px;
+    padding: 6px;
     cursor: pointer;
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 8px;
     width: 100%;
+    font-size: 13px;
 }
 
 .resultado {
     display: flex;
     flex-direction: column; 
-    margin-top: 15px;
-    gap: 5px;
+    margin-top: 10px;
+    gap: 2px;
     width: 100%;
 }
 
 .resultado h1 {
-    font-size: 18px;
-    margin: 5px 0;
+    font-size: 15px;
+    margin: 2px 0;
 }
 
 .resultado p {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
 }
