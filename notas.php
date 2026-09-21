@@ -48,7 +48,9 @@
 
                 <label for="nota1">Nota 1 (Peso 2):</label>
                 <input type="number" id="nota1" name="nota1" required>
-
+                 
+                <label for="nota2">Nota 2 (Peso 3):</label>
+                <input type="number" id="nota2" name="nota2" required>
 
                 <button type="submit">Enviar</button>
             </form>
@@ -57,7 +59,11 @@
             <div class="resultado">
                 <h1>Nome: <?= $nome ?></h1>
                 <h1>Idade: <?= $idade ?></h1>
-                
-        }
+                <h1>Média: <?= $media ?></h1>
+                <hr>
+                <p>Situação: <?= $resultado ?></p>
+            </div>
+      <?php  } ?>
+</div>
 </body>
 </html>
