@@ -32,3 +32,30 @@ body {
     border: 2px solid #ccc; 
     box-sizing: border-box; 
 }
+
+form {/*muda dentro do form*/
+    display: flex;
+    flex-direction: column; 
+    width: 80%;
+    gap: 8px; 
+}
+input {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 4px;
+}
+
+button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.resultado {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
