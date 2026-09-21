@@ -37,6 +37,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+<div class="container">
+        <div class="Forms">
+            <form action="" method="POST">
+                <label for= "nome">Nome do aluno:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="nome"> Idade:</label>
+                <input type="number" id="idade" name="idade" required>
+
+                <label for="nota1">Nota 1 (Peso 2):</label>
+                <input type="number" id="nota1" name="nota1" required>
+
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <?php if ($resultado != ""){?>
+            <div class="resultado">
+                <h1>Nome: <?= $nome ?></h1>
+                <h1>Idade: <?= $idade ?></h1>
+                
+        }
 </body>
 </html>
