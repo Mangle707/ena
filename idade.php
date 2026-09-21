@@ -38,8 +38,8 @@
         <?php if ($resultado != "") { ?>
          
          <h1>Nome: <?= $nome ?></h1>
+         <br>
          <h1>Idade: <?= $idade ?></h1>
-        <hr>
         <p>E maior de idade? <?= $resultado ?></p>
     </div>
          <?php } ?>

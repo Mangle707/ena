@@ -14,13 +14,13 @@
         $nota4 = $_POST["nota4"];
         $nota5 = $_POST["nota5"];
 
-        //Calculo da media ponderada com os pesos (pelo que eu entendi)
+        //Calculo da media com pesos (pelo que eu entendi)
         $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3)) / 10;
         
         if ($media >= 7){
             $resultado = "APROVADO";
         }
-        else if ($media >= 5){ // Se não for maior que 7, mas for maior ou igual a 5)
+        else if ($media >= 5){ // (Se não for maior que 7, mas for maior ou igual a 5)
             $resultado = "RECUPERAÇÃO";
         }
         else {
@@ -46,11 +46,20 @@
                 <label for="nome"> Idade:</label>
                 <input type="number" id="idade" name="idade" required>
 
-                <label for="nota1">Nota 1 (Peso 2):</label>
+                <label for="nota1">Nota 1:</label>
                 <input type="number" id="nota1" name="nota1" required>
                  
-                <label for="nota2">Nota 2 (Peso 3):</label>
+                <label for="nota2">Nota 2:</label>
                 <input type="number" id="nota2" name="nota2" required>
+
+                <label for="nota3">Nota 3:</label>
+                <input type="number" id="nota3" name="nota3" required>
+                
+                <label for="nota4">Nota 4:</label>
+                <input type="number" id="nota4" name="nota4" required>
+
+                <label for="nota5">Nota 6:</label>
+                 <input type="number" id="nota5" name="nota5" required>
 
                 <button type="submit">Enviar</button>
             </form>
@@ -60,8 +69,7 @@
                 <h1>Nome: <?= $nome ?></h1>
                 <h1>Idade: <?= $idade ?></h1>
                 <h1>Média: <?= $media ?></h1>
-                <hr>
-                <p>Situação: <?= $resultado ?></p>
+                <p>Atualmente: <?= $resultado ?></p>
             </div>
       <?php  } ?>
 </div>
