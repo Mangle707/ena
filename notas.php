@@ -58,7 +58,7 @@
                 <label for="nota4">Nota 4:</label>
                 <input type="number" id="nota4" name="nota4" required>
 
-                <label for="nota5">Nota 6:</label>
+                <label for="nota5">Nota 5:</label>
                  <input type="number" id="nota5" name="nota5" required>
 
                 <button type="submit">Enviar</button>
