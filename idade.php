@@ -36,9 +36,6 @@
          <button type="submit">Enviar</button>
         </form>
 
-        <form action="index.php" method="GET">
-            <button type="submit">Volte para o Menu Delta</button>
-         </form>
     </div>
         <?php if ($resultado != "") { ?>
          
@@ -47,7 +44,9 @@
          <h1>Idade: <?= $idade ?></h1>
         <p>E maior de idade? <?= $resultado ?></p>
 
-       
+        <form action="index.php" method="GET">
+            <button type="submit">Volte para o Menu Delta</button>
+         </form>
     </div>
          <?php } ?>
 </body>
