@@ -44,6 +44,8 @@
         <p>E maior de idade? <?= $resultado ?></p>
     </div>
          <?php } ?>
-         <button href="idade.php">Volte para o Menu Delta</button>
+         <form action="idade.php" method="GET">
+            <button type="submit">Volte para o Menu Delta</button>
+         </form>
 </body>
 </html>
