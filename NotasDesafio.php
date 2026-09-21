@@ -3,16 +3,16 @@
    $idade = 0;
    $resultado = "";
 
-   if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
-        $nome = $_POST["nome"];
-        $idade = $_POST["idade"];
+   if($_SERVER["REQUEST_METHOD"] == "GET"){//Trocado do POST para GET
+        $nome = $_GET["nome"];
+        $idade = $_GET["idade"];
 
         //Area das notas (é aqui que vai ser recebido)
-        $nota1 = $_POST["nota1"];
-        $nota2 = $_POST["nota2"];
-        $nota3 = $_POST["nota3"];
-        $nota4 = $_POST["nota4"];
-        $nota5 = $_POST["nota5"];
+        $nota1 = $_GET["nota1"];
+        $nota2 = $_GET["nota2"];
+        $nota3 = $_GET["nota3"];
+        $nota4 = $_GET["nota4"];
+        $nota5 = $_GET["nota5"];
 
         //Calculo da media com pesos (pelo que eu entendi)
         $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3)) / 10;
@@ -39,7 +39,7 @@
 <body>
 <div class="container">
         <div class="Forms">
-            <form action="" method="POST"><!--trocado do POST para GET-->
+            <form action="" method="GET"><!--trocado do POST para GET-->
                 <label for= "nome">Nome do aluno:</label>
                 <input type="text" id="nome" name="nome" required>
 
