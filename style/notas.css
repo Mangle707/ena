@@ -38,15 +38,6 @@ body {
     box-sizing: border-box; 
   }
 
-
-
-form {
-    display: flex;
-    flex-direction: column; 
-    width: 85%; 
-    gap: 8px; 
-}
-
 input {
     background-color: #000000;
     color: #ffffff;
