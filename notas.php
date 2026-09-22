@@ -3,6 +3,7 @@
    $idade = 0;
    $resultado = "";
    $restante = 0;
+   $frequencia = 0;
 
    if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
         $nome = $_POST["nome"];
@@ -17,11 +18,15 @@
 
         //Calculo da media com pesos (pelo que eu entendi)
         $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3)) / 10;
-        
-        if ($media == 10){
+        if ($frequencia < 75) {
+            $resultado = "REPROVADO POR FREQUÊNCIA";
+            $restante = 7 - $media; 
+            if ($restante < 0) { $restante = 0; } 
+        }
+        if ($media == 10 && $frequencia >= 75){
             $resultado = "APROVADO COM EXELENCIA";
         }
-        else if ($media >= 7){ 
+        else if ($media >= 7 && $frequencia >= 75){ 
             $resultado = "APROVADO";
         }
         else if ($media >= 5 && $media < 7){
@@ -67,6 +72,8 @@
                 <label for="nome"> Idade:</label>
                 <input type="number" id="idade" min="1" max="120" name="idade" required>
 
+                <label for="frequencia"> Frequencia:</label>
+                <input type="number" id="frequencia" min="0" max="150" name="frequencia" required>
                 <label for="nota1">Nota 1:</label>
                 <input type="number" id="nota1" min="0" max="10" name="nota1" required>
                  
@@ -93,19 +100,22 @@
             <?php if ($resultado == "APROVADO COM EXELENCIA" || $resultado == "APROVADO") { ?>   
                 <h1>Nome: <?= $nome ?></h1>
                 <h1>Idade: <?= $idade ?></h1>
+                <h1>Frequencia: <?= $frequencia?></h1>
                 <h1>Média: <?= $media ?></h1>
                 <p>Atualmente: <span class="classe-aprovado"><?= $resultado ?></span></p>
                 <?php } ?>
                     <?php if($resultado == "RECUPERAÇAO"){ ?>
                        <h1>Nome: <?= $nome ?></h1>
                        <h1>Idade: <?= $idade ?></h1>
+                       <h1>Frequencia: <?= $frequencia?></h1>
                        <h1>Média: <?= $media ?></h1>
                        <p>Atualmente:<span class="classe-recuperacao"><?= $resultado ?></span></p>
                        <p>Restante para a media: <?= $restante ?></p>
                     <?php } ?>
-                    <?php if($resultado == "REPROVADO"){ ?>
+                    <?php if($resultado == "REPROVADO" || $resultado == "REPROVADO POR FREQUÊNCIA"){ ?>
                        <h1>Nome: <?= $nome ?></h1>
                        <h1>Idade: <?= $idade ?></h1>
+                       <h1>Frequencia: <?= $frequencia?></h1>
                        <h1>Média: <?= $media ?></h1>
                        <p>Atualmente:<span class="classe-reprovado"><?= $resultado ?></span></p>
                        <p>Restante para a media: <?= $restante ?></p>
