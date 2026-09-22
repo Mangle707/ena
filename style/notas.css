@@ -11,7 +11,12 @@ body {
     min-height: 100vh; 
     margin: 0;
 }
-
+.Titulo h1{
+    color:#ffffff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 13px;
+}
 .container {
     display: flex;
     text-align: center;

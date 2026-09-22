@@ -64,32 +64,33 @@
     </style>
 </head>
 <body>
+    <h1 class = "Titulo">Atividade 1 (Notas) </h1>
 <div class="container">
         <div class="Forms">
             <form action="" method="POST"><!--trocado do POST para GET-->
                 <label for= "nome">Nome do aluno:</label>
-                <input type="text" id="nome" name="nome" required>
+                <input type="text" id="nome" placeholder="Digite o nome do aluno" name="nome" required>
 
                 <label for="nome"> Idade:</label>
-                <input type="number" id="idade" min="1" max="120" name="idade" required>
+                <input type="number" id="idade" placeholder="Digite a idade do aluno (idade maxima de ate 120 anos)" min="1" max="120" name="idade" required>
 
                 <label for="frequencia"> Frequencia:</label>
-                <input type="number" id="frequencia" placeholder="Frequencia de 0% a 100%" min="0" max="100" name="frequencia" required>
+                <input type="number" id="frequencia" placeholder="Digite a frequencia de 0% a 100%" min="0" max="100" name="frequencia" required>
 
                 <label for="nota1">Nota 1:</label>
-                <input type="number" id="nota1" min="0" max="10" name="nota1" required>
+                <input type="number" id="nota1" min="0" max="10" placeholder="Digite a primeira nota" name="nota1" required>
                  
                 <label for="nota2">Nota 2:</label>
-                <input type="number" id="nota2" min="0" max="10" name="nota2" required>
+                <input type="number" id="nota2" min="0" max="10" placeholder="Digite a segunda nota" name="nota2" required>
 
                 <label for="nota3">Nota 3:</label>
-                <input type="number" id="nota3" min="0" max="10" name="nota3" required>
+                <input type="number" id="nota3" min="0" max="10" placeholder="Digite terceira nota" name="nota3" required>
                 
                 <label for="nota4">Nota 4:</label>
-                <input type="number" id="nota4" min="0" max="10" name="nota4" required>
+                <input type="number" id="nota4" min="0" max="10" placeholder="Digite a quarta nota" name="nota4" required>
 
                 <label for="nota5">Nota 5:</label>
-                 <input type="number" id="nota5" min="0" max="10" name="nota5" required>
+                 <input type="number" id="nota5" min="0" max="10" placeholder="Digite a quinta nota" name="nota5" required>
 
                 <button type="submit">Enviar</button>
             </form>
