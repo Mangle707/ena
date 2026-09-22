@@ -75,18 +75,16 @@
         </div>
         <?php if ($resultado != ""){?>
             <div class="resultado">
-            <?php if ($resultado == "APROVADO COM EXELENCIA" || $resultado == "APROVADO") { ?>
-                <h1><?= $resultado ?></h1>
-                <?php } else {?>
+            <?php if ($resultado == "APROVADO COM EXELENCIA" || $resultado == "APROVADO") { ?>   
                 <h1>Nome: <?= $nome ?></h1>
                 <h1>Idade: <?= $idade ?></h1>
                 <h1>Média: <?= $media ?></h1>
                 <p>Atualmente: <?= $resultado ?></p>
-
+                <?php } ?>
                 <?php if($resultado == "RECUPERAÇAO" || $resultado == "REPROVADO"){ ?>
                     <p>Atualmente:<p> <?= $resultado ?></p>
                  <p>Restante para a media 7: <?= $restante ?></p>
-                 <?php } ?>
+                 
                  <?php } ?>
                 </div>
      
