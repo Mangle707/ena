@@ -41,6 +41,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade Notas(2)</title>
     <link rel="stylesheet" href="style/notas.css">
+
+    <style>
+        .classe-aprovado {
+            color: #00ff00; /* Verde */
+            font-weight: bold;
+        }
+        .classe-reprovado {
+            color: #ff0000; /* Vermelho */
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -79,13 +90,13 @@
                 <h1>Nome: <?= $nome ?></h1>
                 <h1>Idade: <?= $idade ?></h1>
                 <h1>Média: <?= $media ?></h1>
-                <p>Atualmente: <?= $resultado ?></p>
+                <p>Atualmente: <span class="classe-aprovado"><?= $resultado ?></span></p>
                 <?php } ?>
                 <?php if($resultado == "RECUPERAÇAO" || $resultado == "REPROVADO"){ ?>
                     <h1>Nome: <?= $nome ?></h1>
                     <h1>Idade: <?= $idade ?></h1>
                     <h1>Média: <?= $media ?></h1>
-                    <p>Atualmente:<p> <?= $resultado ?></p>
+                    <p>Atualmente:<span class="classe-reprovado"><?= $resultado ?></span></p>
                     <p>Restante para a media: <?= $restante ?></p>
                  
                  <?php } ?>
