@@ -2,6 +2,7 @@
    $nome = "";
    $idade = 0;
    $resultado = "";
+   $restante = 0;
 
    if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
         $nome = $_POST["nome"];
@@ -17,14 +18,19 @@
         //Calculo da media com pesos (pelo que eu entendi)
         $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3)) / 10;
         
-        if ($media >= 7){
+        if ($media == 10){
+            $resultado = "APROVADO COM EXELENCIA";
+        }
+        else if ($media >= 7){ // (Se não for maior que 7, mas for maior ou igual a 5)
             $resultado = "APROVADO";
         }
-        else if ($media >= 5){ // (Se não for maior que 7, mas for maior ou igual a 5)
-            $resultado = "RECUPERAÇÃO";
+        else if ($media >= 5 && $media < 7){
+            $resultado = "RECUPERAÇAO";
+            $restante = 7 - $media;
         }
-        else {
+        else{
             $resultado = "REPROVADO";
+            $restante = 7 - $media;
         }
     }   
 ?>
@@ -69,14 +75,23 @@
         </div>
         <?php if ($resultado != ""){?>
             <div class="resultado">
+            <?php if ($resultado == "ERRO: Idade inválida!" || $resultado == "ERRO: Notas inválidas!") { ?>
+                <h1><?= $resultado ?></h1>
+                <?php } else {?>
                 <h1>Nome: <?= $nome ?></h1>
                 <h1>Idade: <?= $idade ?></h1>
                 <h1>Média: <?= $media ?></h1>
                 <p>Atualmente: <?= $resultado ?></p>
-            </div>
 
+                <?php if($resultado == "RECUPERAÇAO" || $resultado == "REPROVADO"){ ?>
 
-      <?php  } ?>
+                 <p>Restante para a media 7: <?= $restante ?></p>
+                 <?php } ?>
+                 <?php } ?>
+                </div>
+     
+        <?php }?>
+     
 </div>
 </body>
 </html>
