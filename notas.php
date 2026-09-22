@@ -8,6 +8,7 @@
    if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
         $nome = $_POST["nome"];
         $idade = $_POST["idade"];
+        $frequencia = $_POST["frequencia"];
 
         //Area das notas (é aqui que vai ser recebido)
         $nota1 = $_POST["nota1"];
@@ -23,7 +24,7 @@
             $restante = 7 - $media; 
             if ($restante < 0) { $restante = 0; } 
         }
-        if ($media == 10 && $frequencia >= 75){
+        else if ($media == 10 && $frequencia >= 75){
             $resultado = "APROVADO COM EXELENCIA";
         }
         else if ($media >= 7 && $frequencia >= 75){ 
