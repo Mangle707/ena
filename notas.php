@@ -75,7 +75,7 @@
         </div>
         <?php if ($resultado != ""){?>
             <div class="resultado">
-            <?php if ($resultado == "ERRO: Idade inválida!" || $resultado == "ERRO: Notas inválidas!") { ?>
+            <?php if ($resultado == "APROVADO COM EXELENCIA" || $resultado == "APROVADO") { ?>
                 <h1><?= $resultado ?></h1>
                 <?php } else {?>
                 <h1>Nome: <?= $nome ?></h1>
