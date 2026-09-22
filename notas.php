@@ -48,6 +48,20 @@
     <title>Atividade Notas(2)</title>
     <link rel="stylesheet" href="style/notas.css">
 
+    <style>
+        .classe-aprovado {
+            color: #00ff00; /* Verde */
+            font-weight: bold;
+        }
+        .classe-reprovado {
+            color: #ff0000; /* Vermelho */
+            font-weight: bold;
+        }
+        .classe-recuperacao {/*Laranja */
+            color: orange;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
