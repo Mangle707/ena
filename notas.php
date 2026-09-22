@@ -74,7 +74,8 @@
                 <input type="number" id="idade" min="1" max="120" name="idade" required>
 
                 <label for="frequencia"> Frequencia:</label>
-                <input type="number" id="frequencia" min="0" max="150" name="frequencia" required>
+                <input type="number" id="frequencia" placeholder="Frequencia de 0% a 100%" min="0" max="100" name="frequencia" required>
+
                 <label for="nota1">Nota 1:</label>
                 <input type="number" id="nota1" min="0" max="10" name="nota1" required>
                  
