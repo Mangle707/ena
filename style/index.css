@@ -28,6 +28,7 @@ ul {
     box-sizing: border-box;
     font-family: "Courier New", Courier, monospace;
     overflow-y: auto; 
+    gap: 10px;
 }
 
 li {
