@@ -82,8 +82,11 @@
                 <p>Atualmente: <?= $resultado ?></p>
                 <?php } ?>
                 <?php if($resultado == "RECUPERAÇAO" || $resultado == "REPROVADO"){ ?>
+                    <h1>Nome: <?= $nome ?></h1>
+                    <h1>Idade: <?= $idade ?></h1>
+                    <h1>Média: <?= $media ?></h1>
                     <p>Atualmente:<p> <?= $resultado ?></p>
-                 <p>Restante para a media 7: <?= $restante ?></p>
+                    <p>Restante para a media: <?= $restante ?></p>
                  
                  <?php } ?>
                 </div>
