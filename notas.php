@@ -21,7 +21,7 @@
         if ($media == 10){
             $resultado = "APROVADO COM EXELENCIA";
         }
-        else if ($media >= 7){ // (Se não for maior que 7, mas for maior ou igual a 5)
+        else if ($media >= 7){ 
             $resultado = "APROVADO";
         }
         else if ($media >= 5 && $media < 7){
@@ -51,6 +51,10 @@
             color: #ff0000; /* Vermelho */
             font-weight: bold;
         }
+        .classe-recuperacao {/*Laranja */
+            color: orange;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -61,7 +65,7 @@
                 <input type="text" id="nome" name="nome" required>
 
                 <label for="nome"> Idade:</label>
-                <input type="number" id="idade" min="0" max="150" name="idade" required>
+                <input type="number" id="idade" min="1" max="120" name="idade" required>
 
                 <label for="nota1">Nota 1:</label>
                 <input type="number" id="nota1" min="0" max="10" name="nota1" required>
@@ -92,14 +96,20 @@
                 <h1>Média: <?= $media ?></h1>
                 <p>Atualmente: <span class="classe-aprovado"><?= $resultado ?></span></p>
                 <?php } ?>
-                <?php if($resultado == "RECUPERAÇAO" || $resultado == "REPROVADO"){ ?>
-                    <h1>Nome: <?= $nome ?></h1>
-                    <h1>Idade: <?= $idade ?></h1>
-                    <h1>Média: <?= $media ?></h1>
-                    <p>Atualmente:<span class="classe-reprovado"><?= $resultado ?></span></p>
-                    <p>Restante para a media: <?= $restante ?></p>
-                 
-                 <?php } ?>
+                    <?php if($resultado == "RECUPERAÇAO"){ ?>
+                       <h1>Nome: <?= $nome ?></h1>
+                       <h1>Idade: <?= $idade ?></h1>
+                       <h1>Média: <?= $media ?></h1>
+                       <p>Atualmente:<span class="classe-recuperacao"><?= $resultado ?></span></p>
+                       <p>Restante para a media: <?= $restante ?></p>
+                    <?php } ?>
+                    <?php if($resultado == "REPROVADO"){ ?>
+                       <h1>Nome: <?= $nome ?></h1>
+                       <h1>Idade: <?= $idade ?></h1>
+                       <h1>Média: <?= $media ?></h1>
+                       <p>Atualmente:<span class="classe-reprovado"><?= $resultado ?></span></p>
+                       <p>Restante para a media: <?= $restante ?></p>
+                    <?php } ?>
                 </div>
      
         <?php }?>
