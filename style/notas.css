@@ -88,4 +88,15 @@ button {
     font-size: 15px;
     font-weight: bold;
 }
-
+.classe-aprovado {
+    color: #00ff00; /* Verde */
+    font-weight: bold;
+}
+.classe-reprovado {
+    color: #ff0000; /* Vermelho */
+    font-weight: bold;
+}
+.classe-recuperacao {/*Laranja */
+    color: orange;
+    font-weight: bold;
+}
