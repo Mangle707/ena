@@ -81,10 +81,10 @@
                 <h1>Nome: <?= $nome ?></h1>
                 <h1>Idade: <?= $idade ?></h1>
                 <h1>Média: <?= $media ?></h1>
-                <p>Atualmente: <?= $resultado ?></p>
+                <p>Atualmente: <p class = "aprovado"><?= $resultado ?></p></p>
 
                 <?php if($resultado == "RECUPERAÇAO" || $resultado == "REPROVADO"){ ?>
-
+                    <p>Atualmente:<p class = "reprovado"> <?= $resultado ?></p></p>
                  <p>Restante para a media 7: <?= $restante ?></p>
                  <?php } ?>
                  <?php } ?>
