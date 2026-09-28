@@ -33,8 +33,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
                 <input type="text" id="nome" placeholder="Digite o nome" name="nome" required>
 
                 <label for="senha"> Senha:</label>
-                <input type="password" id="senha" placeholder="Digite sua senha"required>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha"required>
                 <button type="submit">Enviar</button>
+              </form>
             </div>
             <h1><?= $resultado ?></h1>
         </div>
