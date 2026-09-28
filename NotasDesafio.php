@@ -38,6 +38,7 @@
 </head>
 <body>
 <div class="container">
+  <h1 class = "Titulo">Atividade 1 (Notas com o GET) </h1>
         <div class="Forms">
             <form action="" method="GET"><!--trocado do POST para GET-->
                 <label for= "nome">Nome do aluno:</label>
