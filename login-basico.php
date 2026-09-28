@@ -6,6 +6,7 @@ $resultado = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
     $nome = $_POST["nome"];
     $senha = $_POST["senha"];
+    
 
     if ($nome = "sabrina" || $senha = "12345") {
        
@@ -33,7 +34,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
 
                 <label for="senha"> Senha:</label>
                 <input type="text" id="idade" placeholder="Digite sua senha"required>
+                <button type="submit">Enviar</button>
             </div>
+            <h1><?= $resultado ?></h1>
         </div>
 </body>
 </html>
