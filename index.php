@@ -12,6 +12,7 @@
       <li><a href="idade.php">Atividade 1</a></li>
       <li><a href="notas.php">Atividade 2</a></li>
       <li><a href="NotasDesafio.php">Desafio atividade 2</a></li>
+      <li><a href="teste-post.php">Teste-post</a></li>
      </ul>
 </body>
 </html>
