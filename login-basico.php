@@ -23,9 +23,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/loginbasico.css">
     <title>Login-basico</title>
 </head>
 <body>
+    <h3>nome: sabrina  senha: 12345</h3>
        <div class="container"> 
          <div class="Forms">
             <form action="" method="POST"><!--trocado do POST para GET-->
@@ -39,5 +41,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
             </div>
             <h1><?= $resultado ?></h1>
         </div>
+         <!--O metodo post nao deixa aparecer as informacoes da senha na URL ja o get sim-->
 </body>
 </html>

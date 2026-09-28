@@ -1,0 +1,98 @@
+body {
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    background-image: url('./IMG/Background.webp'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+    display: flex;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0); 
+    align-items: center;
+    justify-content: center; /* Garante que o formulário fique centralizado verticalmente */
+    flex-direction: column;
+    padding: 15px; 
+    border: 6px solid #ffffff;
+    border-radius: 0px; 
+    width: 550px; 
+    height: 550px; 
+    margin: 20px auto; 
+    box-sizing: border-box;
+    font-family: "Courier New", Courier, monospace;
+    overflow-y: auto; 
+}
+
+.Forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    width: 90%; 
+    gap: 8px; 
+    text-align: left; 
+}
+
+label {
+    font-size: 13px; 
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+input {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 6px; 
+    font-size: 13px;
+    font-family: "Courier New", Courier, monospace;
+    outline: none;
+}
+
+/* Efeito visual quando o usuário clica no input */
+input:focus {
+    border: 1px solid #00ff00; /* Borda verde opcional para destacar o foco, ou mude para #ffffff */
+}
+
+button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 12px;
+    width: 100%;
+    font-size: 13px;
+    font-family: "Courier New", Courier, monospace;
+    transition: background 0.2s;
+}
+
+/* Efeito ao passar o mouse no botão */
+button:hover {
+    background-color: #cccccc;
+}
+
+/* Estilização da mensagem de resultado (Sucesso / Erro) */
+.container h1 {
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
