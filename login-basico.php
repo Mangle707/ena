@@ -27,8 +27,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
     <title>Login-basico</title>
 </head>
 <body>
-    <h3>nome: sabrina  senha: 12345</h3>
        <div class="container"> 
+       <h1 class = "Titulo">Atividade 3 (Loginbasico) </h1>
+       <h3>nome: sabrina  senha: 12345</h3>
          <div class="Forms">
             <form action="" method="POST"><!--trocado do POST para GET-->
                 <label for= "nome">Nome:</label>

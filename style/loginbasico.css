@@ -19,19 +19,37 @@ body {
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0); 
     align-items: center;
-    justify-content: center; /* Garante que o formulário fique centralizado verticalmente */
+    justify-content: flex-start; /* Mantém os títulos no topo */
     flex-direction: column;
-    padding: 15px; 
+    padding: 25px 15px; 
     border: 6px solid #ffffff;
     border-radius: 0px; 
     width: 550px; 
     height: 550px; 
     margin: 20px auto; 
     box-sizing: border-box;
-    font-family: "Courier New", Courier, monospace;
     overflow-y: auto; 
 }
 
+/* Título principal da atividade */
+.container h1.Titulo {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+}
+
+/* Dica de nome e senha */
+.container h3 {
+    font-size: 12px;
+    font-weight: normal;
+    color: #aaaaaa; 
+    margin: 0 0 10px 0;
+}
+
+/* CAIXA PRINCIPAL DO FORMS - AGORA 100% CENTRALIZADA */
 .Forms {
     display: flex;
     flex-direction: column;
@@ -39,19 +57,20 @@ body {
     align-items: center;
     width: 100%; 
     box-sizing: border-box; 
+    margin: auto 0; /* CORREÇÃO: O 'auto' calcula o espaço restante em cima/baixo e centraliza o bloco */
 }
 
 form {
     display: flex;
     flex-direction: column; 
     width: 90%; 
-    gap: 8px; 
+    gap: 6px; 
     text-align: left; 
 }
 
 label {
     font-size: 13px; 
-    margin-top: 2px;
+    margin-top: 4px;
     font-weight: bold;
 }
 
@@ -65,9 +84,9 @@ input {
     outline: none;
 }
 
-/* Efeito visual quando o usuário clica no input */
 input:focus {
-    border: 1px solid #00ff00; /* Borda verde opcional para destacar o foco, ou mude para #ffffff */
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 button {
@@ -77,22 +96,23 @@ button {
     padding: 8px;
     cursor: pointer;
     font-weight: bold;
-    margin-top: 12px;
+    margin-top: 14px;
     width: 100%;
     font-size: 13px;
     font-family: "Courier New", Courier, monospace;
+    text-transform: uppercase;
     transition: background 0.2s;
 }
 
-/* Efeito ao passar o mouse no botão */
 button:hover {
     background-color: #cccccc;
 }
 
-/* Estilização da mensagem de resultado (Sucesso / Erro) */
-.container h1 {
-    font-size: 15px;
-    margin-top: 20px;
+/* Mensagem de resultado do PHP (Sucesso / Erro) embaixo do form */
+.container h1:not(.Titulo) {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 15px; /* Adicionado um espaço na barra inferior se o texto aparecer */
     font-weight: bold;
-    text-transform: uppercase;
+    letter-spacing: 1px;
 }
