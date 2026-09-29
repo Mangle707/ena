@@ -5,6 +5,7 @@
   $nota = 0;
   $resul = "";
 
+
   echo "<br>Meu sistema esta conectado!";
            //crie a tabela caso nao exista
     $sql = "CREATE TABLE IF NOT EXISTS jogos (
@@ -14,16 +15,20 @@
      nota INT NOT NULL
      )"; 
 
-     $pdo-> exec($sql);
+    $pdo-> exec($sql);
 
      echo "<br>Tabela criada com sucesso!";
+
+     $enviar = "INSERT INTO jogos(
+     nome, genero, nota
+     )VALUES()";
 
      if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
         $nome = $_POST["nome"];
         $genero = $_POST["genero"];
         $nota = $_POST["nota"];
     
-         
+        $pdo-> exec($enviar);
          
     }
 ?>
@@ -50,7 +55,6 @@
                 <button type="submit">Enviar</button>
             </form>
     </div>
-    <h1>Dados enviados</h1>
 </div>
 </body>
 </html>
