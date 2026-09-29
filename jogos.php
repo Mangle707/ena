@@ -21,7 +21,7 @@
 
      $enviar = "INSERT INTO jogos(
      nome, genero, nota
-     )VALUES()";
+     )VALUES($nome,$genero,$nota)";
 
      if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
         $nome = $_POST["nome"];
