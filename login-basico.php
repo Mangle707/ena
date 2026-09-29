@@ -41,6 +41,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
               </form>
             </div>
             <h1><?= $resultado ?></h1>
+            <form action="index.php" method="GET">
+            <button type="submit">Volte para o Menu Delta</button>
+         </form>
         </div>
          <!--O metodo post nao deixa aparecer as informacoes da senha na URL ja o get sim-->
 </body>
