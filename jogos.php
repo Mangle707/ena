@@ -30,7 +30,7 @@
             )VALUES('$nome','$genero',$nota)";//aqui salva e manda
         
         $pdo-> exec($enviar);//aqui envia os dados
-        echo "Valor enviado";
+        echo "<br><p>Valor enviado</p>";
          
     }
 ?>
