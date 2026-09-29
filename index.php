@@ -27,7 +27,8 @@
       <li><a href="idade.php">Atividade 1</a></li>
       <li><a href="notas.php">Atividade 2</a></li>
       <li><a href="NotasDesafio.php">Desafio atividade 2</a></li>
-      <li><a href="login-basico.php">Login Basico</a></li>
+      <li><a href="login-basico.php">Atividade 3 Login Basico</a></li>
+      <li><a href="jogos.php">Atividade 4 Cadastro de jogos</a></li>
      </ul>
 </body>
 </html>
