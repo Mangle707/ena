@@ -12,6 +12,7 @@ body {
     margin: 0;
 
     cursor: url('./IMG/cursors/normal.cur'), auto;
+    cursor: pointer;
 }
 
 ul {
