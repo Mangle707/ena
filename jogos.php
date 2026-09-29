@@ -19,16 +19,18 @@
 
      echo "<br>Tabela criada com sucesso!";
 
-     $enviar = "INSERT INTO jogos(
-     nome, genero, nota
-     )VALUES($nome,$genero,$nota)";
-
+     
      if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
         $nome = $_POST["nome"];
         $genero = $_POST["genero"];
         $nota = $_POST["nota"];
     
-        $pdo-> exec($enviar);
+        $enviar = "INSERT INTO jogos(
+            nome, genero, nota
+            )VALUES($nome,$genero,$nota)";//aqui salva e manda
+        
+        $pdo-> exec($enviar);//aqui envia os dados
+        echo "Valor enviado";
          
     }
 ?>
