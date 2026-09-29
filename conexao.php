@@ -18,7 +18,8 @@ try {//é como o um if e else no try se conseguir vai ali se nao vai para o catc
       PDO::ERRMODE_EXCEPTION   //PDO::ERRMODE_EXCEPTION - é para quando acontecer algum erro
    );
    echo "Conectado com seucesso!";
-} catch(PDOException $erro) {
+} catch(PDOException $erro) { //manda a mensagem de erro caso o try nao de certo
 
+    echo "Erro ao conectar:".$erro ->getMessage();
 }
 ?>
