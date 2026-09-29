@@ -27,7 +27,7 @@
     
         $enviar = "INSERT INTO jogos(
             nome, genero, nota
-            )VALUES($nome,$genero,$nota)";//aqui salva e manda
+            )VALUES('$nome','$genero',$nota)";//aqui salva e manda
         
         $pdo-> exec($enviar);//aqui envia os dados
         echo "Valor enviado";
@@ -40,6 +40,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Jogos</title>
+    <link rel="stylesheet" href="style/jogos.css">
 </head>
 <body>
 <div class="container"> 
