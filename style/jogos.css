@@ -95,13 +95,15 @@ button {
 }
 
 .table-container {
+    display: block;      
+    clear: both;         
     width: 100%;
-    overflow-x: auto;
-    margin: 20px 0;
+    margin-top: 24px;    
+    margin-bottom: 24px; 
+    overflow-x: auto;    
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-
 
 table {
     width: 100%;
