@@ -6,17 +6,22 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* CORREÇÃO: Alinha a .container e a tabela uma abaixo da outra */
+    justify-content: flex-start; /* CORREÇÃO: Permite que a página role para baixo se o conteúdo crescer */
     align-items: center;
     min-height: 100vh; 
     margin: 0;
+    padding: 20px 0; /* Adiciona um respiro nas bordas superior e inferior da tela */
+    box-sizing: border-box;
 }
+
 .Titulo h1{
     color:#ffffff;
     font-weight: bold;
     text-align: start;
     font-size: 13px;
 }
+
 .container {
     display: flex;
     text-align: center;
@@ -60,7 +65,7 @@ input {
     background-color: #000000;
     color: #ffffff;
     border: 1px solid #ffffff;
-    padding: 4px; /* Input mais compacto */
+    padding: 4px; 
     font-size: 13px;
 }
 
@@ -94,64 +99,57 @@ button {
     font-weight: bold;
 }
 
+
+
 .table-container {
     display: block;      
-    clear: both;         
-    width: 100%;
-    margin-top: 24px;    
-    margin-bottom: 24px; 
+    width: 550px; 
+    margin: 10px auto 30px auto; 
     overflow-x: auto;    
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border: 6px solid #ffffff; 
+    box-sizing: border-box;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff;
-    color: #333333;
+    font-family: "Courier New", Courier, monospace; 
+    background-color: #000000; 
+    color: #ffffff; 
     text-align: left;
 }
 
-
 th {
-    background-color: #6200ee; 
-    color: #ffffff;
-    padding: 14px 16px;
-    font-weight: 600;
+    background-color: #ffffff; 
+    color: #000000; 
+    padding: 10px;
+    font-weight: bold;
+    font-size: 13px;
     text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 0.5px;
+    border-bottom: 2px solid #ffffff;
 }
-
 
 td {
-    padding: 12px 16px;
-    border-bottom: 1px solid #e0e0e0;
-    font-size: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ffffff; 
+    font-size: 13px;
 }
 
-
 tr:nth-child(even) td {
-    background-color: #f8f9fa;
+    background-color: #111111;
 }
 
 
 tr:hover td {
-    background-color: #f1f3f5;
-    transition: background-color 0.2s ease;
+    background-color: #222222;
 }
-
 
 td:first-child, th:first-child {
     font-weight: bold;
-    color: #6c757d;
-    width: 80px; 
+    width: 60px; 
 }
-
 
 td:last-child {
     font-weight: bold;
-    color: #2b8a3e; 
+    color: #00ff00; 
 }
