@@ -22,13 +22,48 @@
     <title>Menu Delta</title>
      <link rel="stylesheet" href="style/index.css">
 </head>
+
 <body>  
-     <ul>
-      <li><a href="projetos/idade.php">Atividade 1</a></li>
-      <li><a href="projetos/notas.php">Atividade 2</a></li>
-      <li><a href="projetos/NotasDesafio.php">Desafio atividade 2</a></li>
-      <li><a href="projetos/login-basico.php">Atividade 3 Login Basico</a></li>
-      <li><a href="projetos/jogos.php">Atividade 4 Cadastro de jogos</a></li>
+     <header>
+          <nav class="navbar">
+               <h2 class="logo">Meu portifolio</h2>
+
+     <ul class="menu">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#projeto">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
      </ul>
+     </nav>
+</header>
+<main>
+            <!--INICIO-->
+<section id="inicio" class="inicio">
+     <div class="inicio-conteudo">
+          <p class="saudaçao">Olá! Eu sou</p>
+
+          <h1>Sabrina G. de Oliveira</h1>
+          <h2>desenvolvedora em formaçao</h2>
+
+          <p>
+               Estudante de desenvolvimento de sistemas,
+               me preparando para entrar no mercado de trabalho,
+               ja com um diploma do curso de ingles KNN e Tecnico de desenvolvimento de
+               Sistemas em andamento.
+          </p>
+          <a href="#projetos" class="botao">
+               Veja meus Projetos
+          </a>
+     </div>
+</section>
+
+          <!--SOBRE MIM-->
+<section id="sobre" class="secao">
+
+</section>
+</main>
+
+
 </body>
 </html>
