@@ -62,5 +62,27 @@
             <button type="submit">Volte para o Menu Delta</button>
          </form>
 </div>
+
+<h2>Jogos ja cadastrados</h2>
+
+<div class=table-container>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Genero</th>
+            <th>Nota</th>
+        </tr>
+
+        <?php foreach($jogos as $jogo) {?>
+            <tr>
+                <td><?= $jogo["id"]?></td>
+                <td><?= $jogo["nome"]?></td>
+                <td><?= $jogo["genero"]?></td>
+                <td><?= $jogo["nota"]?></td>
+            </tr>
+            <?php } ?>
+    </table>
+</div>
 </body>
 </html>
