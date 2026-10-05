@@ -100,11 +100,148 @@
           </div>
      </div>
     </section>
+       <!--Projetos-->
         <section class="projetos" class="secao">
+          <h2 class="titulo-secao">Meus Projetos</h2>
+          <p class="subtitulo-secao">
+               Alguns projetos desenvolvidos durante as aulas.
+          </p>
+          <div class="projetos-container">
+        <!--Projeto 1-->
+        <div class="projeto-card">
+           <div class="projeto-numero">
+               01
+           </div>
+           <h3>Verificaçao de idade</h3>
+           <p>
+               sistema desenvolvido para praticar 
+               formulario e manipulaçao de dados para uma verificaçao de idade.<br>
+               o sistema ira dizer se voce é de maior ou menor.
+           </p>
+           <div class="tecnologias">
+               <span>HTML</span>
+               <span>CSS</span>
+               <span>PHP</span>
+           </div>
+           <a href="projetos/idade.php" class="link-projeto">
+               > Ver projeto <
+           </a>
+         </div>
 
+          <!--Projeto 2-->
+        <div class="projeto-card">
+           <div class="projeto-numero">
+               02
+           </div>
+           <h3>Atividade Notas</h3>
+           <p>
+               sistema desenvolvido para simular notas de uma escola e frequencia
+               usando o POST
+               
+           </p>
+           <div class="tecnologias">
+               <span>HTML</span>
+               <span>CSS</span>
+               <span>PHP</span>
+           </div>
+           <a href="projetos/notas.php" class="link-projeto">
+               > Ver projeto <
+           </a>
+         </div>
+
+          <!--Projeto 3-->
+        <div class="projeto-card">
+           <div class="projeto-numero">
+               03
+           </div>
+           <h3>Atividade NotasDesafio</h3>
+           <p>
+               sistema desenvolvido para simular notas de uma escola sem a frequencia
+               mas usando o GET.
+               
+           </p>
+           <div class="tecnologias">
+               <span>HTML</span>
+               <span>CSS</span>
+               <span>PHP</span>
+           </div>
+           <a href="projetos/NotasDesafio.php" class="link-projeto">
+               > Ver projeto <
+           </a>
+         </div>
+          <!--Projeto 4-->
+        <div class="projeto-card">
+           <div class="projeto-numero">
+               04
+           </div>
+           <h3>Login Basico</h3>
+           <p>
+               como o proprio nome diz é para simular um login 
+               basico de um site
+               
+           </p>
+           <div class="tecnologias">
+               <span>HTML</span>
+               <span>CSS</span>
+               <span>PHP</span>
+           </div>
+           <a href="projetos/login-basico.php" class="link-projeto">
+               > Ver projeto <
+           </a>
+         </div>
+          <!--Projeto 5-->
+        <div class="projeto-card">
+           <div class="projeto-numero">
+               02
+           </div>
+           <h3>Atividade de cadastro de jogos</h3>
+           <p>
+               sistema desenvolvido para cadastrar jogos em um banco de dados,
+               codigo do mysql estao dentro do codigo php.
+           </p>
+           <div class="tecnologias">
+               <span>HTML</span>
+               <span>CSS</span>
+               <span>PHP</span>
+               <span>MySql</span>
+           </div>
+           <a href="projetos/jogos.php" class="link-projeto">
+               > Ver projeto <
+           </a>
+         </div>
+
+        </div>
+    </section>
+    <section id="contato" class="secao secao-destaque">
+     <h2 class="titulo-secao">Contatos</h2>
+     <p class="subtitulo-secao">
+          Quer entrar em contato comigo?
+     </p>
+     <div class="contato-container">
+          <div class="contato-item">
+               <h3>Whatsapp</h3>
+               <p></p>
+          </div>
+          <div class="contato-item">
+               <h3>GitHub</h3>
+               <p>https://github.com/Mangle707</p>
+          </div>
+          <div class="contato-item">
+               <h3>linkedIn</h3>
+               <p></p>
+          </div>
+          <div class="contato-item">
+               <h3>E-mail</h3>
+               <p>magicline42@gmail.com</p>
+          </div>
+     </div>
     </section>
 </main>
-
+<footer>
+     <p>
+          Desenvolvido por <a href="https://sabrina315.xyz">Sabrina G</a> - 2026
+     </p>
+</footer>
 
 </body>
 </html>
