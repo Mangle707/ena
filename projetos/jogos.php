@@ -1,12 +1,12 @@
 <?php
+  require __DIR__ . "/../conexao.php";
+  
   require "conexao.php";
   $nome = "";
   $genero = "";
   $nota = 0;
   $resul = "";
 
-
-  echo "<br>Meu sistema esta conectado!";
            //crie a tabela caso nao exista
     $sql = "CREATE TABLE IF NOT EXISTS jogos (
      id INT AUTO_INCREMENT PRIMARY KEY,
@@ -49,7 +49,7 @@
 <div class="container"> 
      <h1 class = "Titulo">Atividade 4 (Cadastro de jogos pelo banco) </h1>
         <div class="Forms">
-           <form action="" method="POST"><!--trocado do POST para GET-->
+           <form action="" method="POST">
                 <label for= "nome">Nome:</label>
                 <input type="text" id="nome" name="nome"  placeholder="Digite o nome do jogo" required>
 
