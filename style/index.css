@@ -1,53 +1,53 @@
-body {
-    color: rgb(255, 255, 255);
-    background-color: #000000;
-    background-image: url('./IMG/Background.webp'); 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center;
-    height: 100vh;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing:border-box;
 
-    cursor: url('./IMG/cursors/normal.cur'), auto;
-    cursor: pointer;
 }
 
-ul {
+html {
+    scroll-behavior: smooth ;
+}
+body {
+    font-family:'Helvetica', 'Arial', Arial, sans-serif;
+    background-color: black;
+    color: aliceblue;
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgb(29, 29, 29);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+}
+
+.navbar {
+    max-width: 1100px;
+    margin:auto;
+    
     display: flex;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0); 
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    padding: 15px; 
-    border: 6px solid #ffffff;
-    border-radius: 0px; 
-    width: 550px; 
-    height: 550px; 
-    margin: 20px auto; 
-    box-sizing: border-box;
-    font-family: "Courier New", Courier, monospace;
-    overflow-y: auto; 
-    gap: 10px;
+
+    padding: 20px;
 }
 
-li {
-    width: 85%; 
-    text-align: center;
+.logo {
+    color: aliceblue;
+
 }
+.menu {
+    display: flex;
+    gap: 25px;
 
+     list-style: none;
 
-li a {
-    display: block;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 10px;
-    text-decoration: none; 
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    cursor: pointer;
+}
+.menu a {
+    color: aliceblue;
+}
+.menu a:hover {
+    color: rgb(100, 3, 3);
 }
