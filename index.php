@@ -1,18 +1,3 @@
-<?php
-  require "conexao.php";
-
-  echo "<br>Meu sistema esta conectado!";
-           //crie a tabela caso nao exista
-    $sql = "CREATE TABLE IF NOT EXISTS teste (
-     id INT AUTO_INCREMENT PRIMARY KEY,
-     nome VARCHAR(100),
-     idade INT
-     )"; 
-
-     $pdo-> exec($sql);
-
-     echo "<br>Tabela criada com sucesso!";
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -60,8 +45,64 @@
 
           <!--SOBRE MIM-->
 <section id="sobre" class="secao">
+     <h2 class="Titulo-secao">Sobre mim</h2>
+     <div class="sobre-conteudo">
+          <div class="foto">
+               JS
+          </div>
+          <div class="sobre-texto">
+               <h3>Quem sou eu?</h3>
+               <p>
+                    Meu nome é Sabrina G. Oliveira,
+                    e sou estudante de Desenvolvimento de sistemas.
+               </p>
+               <p>
+                    Atualmente estou Cursando desenvolvimento de sistemas, para web programaçao, criacao de sistemas
+                    e futuramente pretendo aprender C Sharp.<br>
+                    Este portfólio reúne alguns dos projetos desenvolvidos durante o curso.
+               </p>
+               <p>
+                    Meu objetivo principal é virar uma programadora de 
+                    jogos, tambem pretendo desenvolvimento web. 
+                    <br>E continuar evoluindo.
+               </p>
+          </div>
+     </div>
 
 </section>
+             <!--HABILIDADES-->
+    <section id="habilidades" class="secao secao-destaque">
+     <h2 class="titulo-secao">Minhas habilidades</h2>
+     <p class="subtitulo-secao">
+          Algumas tenologias que estou estudando:
+     </p>
+     <div class="lista-habilidades">
+          <div class="habilidade">
+               HTML
+          </div>
+          <div class="habilidade">
+               CSS
+          </div>
+          <div class="habilidade">
+               REACT
+          </div>
+          <div class="habilidade">
+               LINGUAGEM C
+          </div>
+          <div class="habilidade">
+               PYTHON
+          </div>
+          <div class="habilidade">
+               JS
+          </div>
+          <div class="habilidade">
+               PHP
+          </div>
+     </div>
+    </section>
+        <section class="projetos" class="secao">
+
+    </section>
 </main>
 
 
