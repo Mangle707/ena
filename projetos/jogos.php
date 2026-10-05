@@ -1,7 +1,6 @@
 <?php
   require __DIR__ . "/../conexao.php";
   
-  require "conexao.php";
   $nome = "";
   $genero = "";
   $nota = 0;
