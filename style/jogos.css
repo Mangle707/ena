@@ -6,12 +6,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    flex-direction: column; /* CORREÇÃO: Alinha a .container e a tabela uma abaixo da outra */
-    justify-content: flex-start; /* CORREÇÃO: Permite que a página role para baixo se o conteúdo crescer */
+    flex-direction: column; 
+    justify-content: flex-start; 
     align-items: center;
     min-height: 100vh; 
     margin: 0;
-    padding: 20px 0; /* Adiciona um respiro nas bordas superior e inferior da tela */
+    padding: 20px 0; 
     box-sizing: border-box;
 }
 

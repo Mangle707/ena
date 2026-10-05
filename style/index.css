@@ -6,7 +6,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
+    justify-content: flex-start; 
     align-items: center;
     height: 100vh;
     margin: 0;
