@@ -33,6 +33,9 @@
         echo "<br><p>Valor enviado</p>";
          
     }
+
+    $consulta = $pdo->query("SELECT * FROM jogos");
+    $jogos = $consulta->fetchAll(PDO::FETCH_ASSOC); 
 ?>
 <!DOCTYPE html>
 <html lang="PT-BR">
@@ -73,7 +76,7 @@
             <th>Genero</th>
             <th>Nota</th>
         </tr>
-
+    <?php if (count($jogos) > 0): ?>
         <?php foreach($jogos as $jogo) {?>
             <tr>
                 <td><?= $jogo["id"]?></td>
@@ -82,6 +85,11 @@
                 <td><?= $jogo["nota"]?></td>
             </tr>
             <?php } ?>
+            <?php else: ?>
+            <tr>
+                <td colspan="4" style="text-align: center; color: #888;">Nenhum jogo cadastrado ainda.</td>
+            </tr>
+        <?php endif; ?>
     </table>
 </div>
 </body>
