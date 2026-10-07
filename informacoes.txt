@@ -1,0 +1,61 @@
+VETORES
+alunos[5]
+0 = Aluno 1
+1 = Aluno 2
+2 = Aluno 3
+3 = Aluno 4
+4 = Aluno 5
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ISSO É UM ARRAY SEQUENCIAL <---
+===============================================================
+ARRAY ASSOCIATIVO <----
+"nome": "Aluno 1",
+"nome2": "Aluno 2"
+
+
+[
+        {
+            "nome": "Sabrina",
+            "idade": 19,
+            "curso": "Desenvolvimento de sistemas"
+        },
+        {
+            "nome": "Julia",
+            "idade": 18,
+            "curso": "direito"
+        }
+]
+================================================================
+
+                       CRUD
+
+C = CREATE = CRIAR
+R = READ = LER
+U = UPDATE = ATUALIZAR
+D = DELETE = DELETAR
+
+==================================================================
+  {
+            "nome": "Sabrina",
+            "idade": 19,
+            "curso": "Desenvolvimento de sistemas",
+            "notas": {
+                "portugues":{ // isso aqui seria uma matrix
+                    "prova1": 10,
+                    "prova2": 5,
+                    "prova3": 9
+                },
+                "matematica":{
+                    "prova1": 10,
+                    "prova2": 5,
+                    "prova3": 9
+                }
+            }
+        }
+================================================================
+ //FORMATA O JSON CORRETAMENTE
+      JSON_PRETTY_PRINT 
+
+   //SERVE PARA ENTENDER CARACTERES DENTRO DO ARRAY
+  JSON_UNESCAPE_UNICODE 

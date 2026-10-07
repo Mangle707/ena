@@ -1,0 +1,20 @@
+[
+        {
+            "nome": "Sabrina",
+            "idade": 19,
+            "curso": "Desenvolvimento de sistemas",
+            "notas": {
+                "portugues":{
+                    "prova1": 10,
+                    "prova2": 5,
+                    "prova3": 9
+                },
+                "matematica":{
+                    "prova1": 10,
+                    "prova2": 5,
+                    "prova3": 9
+                }
+            }
+        }
+      
+]
