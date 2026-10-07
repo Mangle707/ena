@@ -228,7 +228,7 @@
           </div>
           <div class="contato-item">
                <h3>linkedIn</h3>
-               <p></p>
+               <p>www.linkedin.com/in/sabrina-gonçalves-oliveira</p>
           </div>
           <div class="contato-item">
                <h3>E-mail</h3>
