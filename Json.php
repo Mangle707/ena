@@ -60,9 +60,20 @@ echo "OS DADOS ENVIADOS PARA JSON NO ARQUIVO dados.json";
   }
 
   if ($acao === "deletar"){
-        foreach($alunos as $posicao => $aluno){
-           
-        }
+       //pega o nome para deletar
+       $nome = $_POST["nome"];
+       //percorre todos os nomes
+       foreach($alunos as $posicao => $aluno){ 
+        // VERIFICA SE ENCONTROU O ALUNO
+            if ($aluno["nome"] === $nome){
+
+             // DELETAR O ALUNO DO ARRAY
+             unset($aluno[$posicao]);
+            }
+            
+       }
+       //reorganiza as posiçoes do array
+       $alunos = array_values($aluno);
   }
 }
 
