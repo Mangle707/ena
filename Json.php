@@ -24,6 +24,7 @@ $jsonAtualizado = json_encode($alunos,
 );
 //7. SALVA NO ARQUIVO
 file_put_contents($caminho, $jsonAtualizado);
+echo "DADOS ENVIADOS PARA JSON"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +34,7 @@ file_put_contents($caminho, $jsonAtualizado);
     <title>Document</title>
 </head>
 <body>
+
     
 </body>
 </html>
