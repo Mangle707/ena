@@ -58,6 +58,12 @@ echo "OS DADOS ENVIADOS PARA JSON NO ARQUIVO dados.json";
          echo "Dados atualizados";
 
   }
+
+  if ($acao === "deletar"){
+        foreach($alunos as $posicao => $aluno){
+           
+        }
+  }
 }
 
 
@@ -98,7 +104,17 @@ echo "OS DADOS ENVIADOS PARA JSON NO ARQUIVO dados.json";
     <input  type="text" name="curso" id="curso">
     <button type="submit" name="acao" value="atualizar">Atualizar</button>
  </form>
-    
+
+       <h2>Deletar Cadastrados</h2>
+<form method="POST">
+    <label>nome: </label>
+    <input  type="text" name="nome" id="nome">
+     <label>idade: </label>
+    <input  type="number" name="idade" id="idade">
+     <label>curso: </label>
+    <input  type="text" name="curso" id="curso">
+    <button type="submit" name="acao" value="deletar">Deletar</button>
+ </form>
 
 
 </body>
