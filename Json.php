@@ -14,9 +14,9 @@ $alunos = json_decode($json, true);
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 // 4. CRIAR UM ALUNO EM JSON
 $novoAluno = [
-    "nome" => $nome = $_POST["nome"],
-    "idade" => $idade = $_POST["idade"],
-    "curso" => $curso = $_POST["curso"]
+    "nome" => $_POST["nome"],
+    "idade" => $_POST["idade"],
+    "curso" => $_POST["curso"]
 ];
 //5. ADICIONAR ALUNO NO ARRAY
 $alunos[] = $novoAluno;
