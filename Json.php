@@ -24,10 +24,10 @@ $jsonAtualizado = json_encode($alunos,
 );
 //7. SALVA NO ARQUIVO
 file_put_contents($caminho, $jsonAtualizado);
-echo "DADOS ENVIADOS PARA JSON"
+echo "DADOS ENVIADOS PARA JSON NO ARQUIVO dados.json";
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
