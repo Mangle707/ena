@@ -30,6 +30,8 @@ $jsonAtualizado = json_encode($alunos,
 file_put_contents($caminho, $jsonAtualizado);
 echo "OS DADOS ENVIADOS PARA JSON NO ARQUIVO dados.json";
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -49,5 +51,14 @@ echo "OS DADOS ENVIADOS PARA JSON NO ARQUIVO dados.json";
     <button type="submit">Enviar</button>
  </form>
     
+    <h2>Alunos Cadastrados</h2>
+    <?php foreach($alunos as $aluno) { ?>
+     <h3><?= $aluno["nome"] ?></h3>
+      <p>Idade: <?= $aluno["idade"] ?></p>
+      <p>Curso: <?= $aluno["curso"] ?></p>
+    <?php } ?>
+
+
+
 </body>
 </html>
