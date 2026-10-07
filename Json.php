@@ -1,7 +1,5 @@
 <?php
-$nome = "";
-$idade = 0;
-$curso = "";
+
 //1. DECLARA O CAMINHO DO ARQUIVO JSON
 $caminho = __DIR__ . "/dados.json";
 
