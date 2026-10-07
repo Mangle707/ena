@@ -41,11 +41,12 @@ echo "OS DADOS ENVIADOS PARA JSON NO ARQUIVO dados.json";
 <body>
  <form method="POST">
     <label>nome: </label>
-    <input  type="text" name="nome">
+    <input  type="text" name="nome" id="nome">
      <label>idade: </label>
-    <input  type="number" name="idade">
+    <input  type="number" name="idade" id="idade">
      <label>curso: </label>
-    <input  type="text" name="curso">
+    <input  type="text" name="curso" id="curso">
+    <button type="submit">Enviar</button>
  </form>
     
 </body>
