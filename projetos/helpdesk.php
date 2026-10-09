@@ -1,5 +1,5 @@
 <?php 
-require_once "helpdesk-func.php";
+require_once "../helpdesk-func.php";
 
 $mensagem = "";
 
@@ -84,9 +84,28 @@ $estatisticas = gerarRelatorio();
 
 <!-- Seçao de abertura de chamados (Create)-->
      <div class="secao-cadastro">
+     <h2>Registrar Novo Chamado</h2>
 
-     </div>
+        <form action="helpdesk.php" method="POST">
+            <input type="hidden" name="acao" value="cadastrar">
+            
+            <div class="campo-grupo">
+                <div class="campo">
+                    <label for="solicitante">Nome do Solicitante *</label>
+                    <input type="text" id="solicitante" name="solicitante" required placeholder="Ex: João Silva">
+                </div>
+                
+             <div class="campo">  <!--Setor e valores-->
+                    <label for="setor">Setor *</label>
+                    <select id="setor" name="setor" required>
+                        <option value="Produção">Produção</option>
+                        <option value="Administrativo">Administrativo</option>
+                        <option value="Logística">Logística</option>
+                        <option value="Financeiro">Financeiro</option>
+                        <option value="TI">TI</option>
+                    </select>
+              </div>
 
-</div>
+        </div>
 </body>
 </html>

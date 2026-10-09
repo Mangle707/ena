@@ -192,7 +192,7 @@
           <!--Projeto 5-->
         <div class="projeto-card">
            <div class="projeto-numero">
-               02
+               05
            </div>
            <h3>Atividade de cadastro de jogos</h3>
            <p>
@@ -209,9 +209,10 @@
                > Ver projeto <
            </a>
          </div>
+         <!--Projeto 6-->
          <div class="projeto-card">
            <div class="projeto-numero">
-               02
+               06
            </div>
            <h3>Atividade de cadastro usando JSON</h3>
            <p>
@@ -220,12 +221,33 @@
            <div class="tecnologias">
                <span>HTML</span>
                <span>PHP</span>
+               <span>JSON</span>
            </div>
            <a href="projetos/Json.php" class="link-projeto">
                > Ver projeto <
            </a>
          </div>
-
+          
+         <!--Projeto 7-->
+         <div class="projeto-card">
+           <div class="projeto-numero">
+               07
+           </div>
+           <h3>Atividade HELP DESK</h3>
+           <p>
+           Nesta atividade, você deverá desenvolver um sistema básico de gerenciamento de
+          chamados técnicos, semelhante aos utilizados por empresas e indústrias para registrar 
+          problemas relacionados à tecnologia da informação.
+           </p>
+           <div class="tecnologias">
+               <span>HTML</span>
+               <span>PHP</span>
+               <span>JSON</span>
+           </div>
+           <a href="projetos/helpdesk.php" class="link-projeto">
+               > Ver projeto <
+           </a>
+         </div>
          
         </div>
     </section>

@@ -1,6 +1,6 @@
 <?php
 
-const CAMINHO_JSON = 'chamados.json';
+const CAMINHO_JSON = __DIR__ . '/chamados.json'; //vai procurar o JSON por aqui
 const SECTORS = ['Produçao', 'Administrativo', 'Logistica', 'Financeiro', 'TI'];
 const EQUIPMENTS = ['Computador', 'Impressora', 'Rede', 'Sistema', 'Outro'];
 const PRIORITIES = ['Baixa', 'Média', 'Alta'];

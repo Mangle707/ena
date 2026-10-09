@@ -1,7 +1,7 @@
 <?php
 
 //1. DECLARA O CAMINHO DO ARQUIVO JSON
-$caminho = __DIR__ . "/dados.json";
+$caminho = __DIR__ . "../dados.json";
 
 // 2. ABRIR/LER ARQUIVOS
 $json = file_get_contents($caminho);
