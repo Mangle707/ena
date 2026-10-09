@@ -3,13 +3,13 @@
 ============================================== */
 
 :root {
-    --cor-principal: #6366f1;       /* Indigo moderno */
-    --cor-principal-hover: #4f46e5; /* Indigo escuro para hover */
-    --cor-fundo: #fafafa;           /* Fundo geral limpo */
-    --cor-texto: #1e293b;           /* Texto principal em tom ardósia */
+    --cor-principal: #0d9488;       /* Verde-água/Teal moderno */
+    --cor-principal-hover: #0f766e; /* Verde-água escuro para hover */
+    --cor-fundo: #f4f7f6;           /* Fundo geral limpo com leve toque verde-água */
+    --cor-texto: #111827;           /* Texto principal escuro */
     --cor-card: #ffffff;            /* Fundo dos cards e caixas */
-    --cor-borda: #e2e8f0;           /* Cor para contornos/linhas subtis */
-    --cor-destaque-bg: #0f172a;     /* Fundo escuro para secções de destaque (Início, Footer) */
+    --cor-borda: #ccdbd8;           /* Cor para contornos/linhas subtis em tom esverdeado */
+    --cor-destaque-bg: #042f2e;     /* Fundo verde-água ultra escuro para secções de destaque (Início, Footer) */
 }
 
 * {
@@ -218,7 +218,7 @@ header {
 
 .secao-destaque {
     max-width: 100%;
-    background-color: #f1f5f9;
+    background-color: #e6f2f0; /* Fundo alternativo suave em verde-água */
 }
 
 .secao-destaque > * {
@@ -334,8 +334,8 @@ header {
 }
 
 .tecnologias span {
-    background-color: #e0e7ff;
-    color: #4338ca;
+    background-color: #ccfbf1; /* Fundo das tags combinando com a paleta */
+    color: #115e59;           /* Texto das tags em verde-água escuro */
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 13px;
@@ -441,142 +441,5 @@ footer a:hover {
 
     .menu {
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--cor-destaque-bg);
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 30px 0;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-        
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.3s ease;
-    }
-
-    .menu.ativo {
-        max-height: 400px;
-        opacity: 1;
-    }
-
-    .menu-toggle.ativo span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-
-    .menu-toggle.ativo span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.ativo span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-
-    .menu {
-        gap: 15px;
-        padding-left: 0;
-    }
-
-    /* INÍCIO */
-    .inicio {
-        min-height: 70vh;
-        padding: 40px 0;
-    }
-
-    .inicio h1 {
-        font-size: 40px;
-    }
-
-    .inicio h2 {
-        font-size: 22px;
-    }
-
-    /* SEÇÕES GERAIS */
-    .secao {
-        padding: 50px 20px;
-    }
-
-    .titulo-secao {
-        font-size: 28px;
-    }
-
-    /* SOBRE MIM */
-    .sobre-conteudo {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .foto {
-        width: 150px;
-        height: 150px;
-        min-width: 150px;
-        font-size: 45px;
-    }
-
-    .projetos-container {
-        gap: 20px;
-    }
-
-    .projeto-card {
-        flex: 0 0 calc(50% - 13px); 
-    }
-
-    /* CONTATO */
-    .contato-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contato-item {
-        width: 100%;
-        max-width: 340px;
-    }
-}
-
-/* Celulares Pequenos (Até 480px) */
-@media (max-width: 480px) {
-    .navbar {
-        padding: 15px 10px;
-    }
-
-    .menu {
-        flex-direction: column; 
-        gap: 10px;
-    }
-
-    .inicio h1 {
-        font-size: 32px; 
-    }
-
-    .inicio h2 {
-        font-size: 18px;
-    }
-
-    .inicio-conteudo > p {
-        font-size: 14px;
-    }
-
-    .titulo-secao {
-        font-size: 24px;
-    }
-
-    .subtitulo-secao {
-        margin-bottom: 25px;
-        font-size: 14px;
-    }
-
-    .projeto-card {
-        flex: 0 0 85%; 
-    }
-
-    .contato-item {
-        max-width: 100%; 
-    }
-    
-    .contato-item a {
-        width: 100%; 
     }
 }
