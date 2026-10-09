@@ -220,6 +220,7 @@
            </p>
            <div class="tecnologias">
                <span>HTML</span>
+               <span>CSS</span>   
                <span>PHP</span>
                <span>JSON</span>
            </div>
@@ -241,6 +242,7 @@
            </p>
            <div class="tecnologias">
                <span>HTML</span>
+               <span>CSS</span>
                <span>PHP</span>
                <span>JSON</span>
            </div>

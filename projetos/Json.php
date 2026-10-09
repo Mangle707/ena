@@ -88,6 +88,7 @@ echo "OS DADOS ENVIADOS PARA JSON NO ARQUIVO dados.json";
     <title>Document</title>
 </head>
 <body>
+  <h1>Atividade JSON</h1>
  <form method="POST">
     <label>nome: </label>
     <input  type="text" name="nome" id="nome">
