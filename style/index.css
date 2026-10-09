@@ -3,13 +3,13 @@
 ============================================== */
 
 :root {
-    --cor-principal: #d13b00;       /* Verde-água/Teal moderno */
-    --cor-principal-hover: #76380f; /* Verde-água escuro para hover */
-    --cor-fundo: #181614;           /* Fundo geral limpo com leve toque verde-água */
-    --cor-texto: #af502b;           /* Texto principal escuro */
-    --cor-card: #221404;            /* Fundo dos cards e caixas */
-    --cor-borda: #ccdbd8;           /* Cor para contornos/linhas subtis em tom esverdeado */
-    --cor-destaque-bg: #2f0904;     /* Fundo verde-água ultra escuro para secções de destaque (Início, Footer) */
+    --cor-fundo: #0D0B0C;           /* Preto absoluto - Fundo geral */
+    --cor-destaque-bg: #24171A;     /* Marrom/Preto avermelhado escuro - Headers, Footers e Seções de Destaque */
+    --cor-card: #6D1020;            /* Vinho/Borgonha - Fundo dos cards e caixas */
+    --cor-principal: #D90429;       /* Vermelho vivo - Botões, links ativos e destaques principais */
+    --cor-principal-hover: #6D1020; /* Vinho escuro - Para efeitos de passar o mouse */
+    --cor-texto: #F4F1DE;           /* Off-White/Creme - Texto principal de altíssima legibilidade */
+    --cor-borda: #24171A;           /* Tom escuro sutil para contornos e linhas de divisão */
 }
 
 * {
@@ -37,6 +37,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 1px solid rgba(244, 241, 222, 0.1);
 }
 
 .navbar {
@@ -51,7 +52,7 @@ header {
 }
 
 .logo {
-    color: white;
+    color: var(--cor-texto);
 }
 
 .menu {
@@ -100,7 +101,7 @@ header {
     display: flex;
     align-items: center;
     background-color: var(--cor-destaque-bg);
-    color: white;
+    color: var(--cor-texto);
 }
 
 .inicio-conteudo {
@@ -128,6 +129,7 @@ header {
 
 .inicio-conteudo > p {
     max-width: 600px;
+    color: #cbd5e1;
 }
 
 .botao {
@@ -144,6 +146,7 @@ header {
     border-radius: 6px;
 
     font-weight: bold;
+    transition: background 0.2s ease;
 }
 
 .botao:hover {
@@ -164,11 +167,12 @@ header {
     font-size: 35px;
     text-align: center;
     margin-bottom: 10px;
+    color: var(--cor-texto);
 }
 
 .subtitulo-secao {
     text-align: center;
-    color: #64748b;
+    color: #94a3b8;
     margin-bottom: 40px;
 }
 
@@ -200,6 +204,7 @@ header {
     align-items: center;
     font-size: 60px;
     font-weight: bold;
+    border: 3px solid var(--cor-card);
 }
 
 .sobre-texto h3 {
@@ -209,6 +214,7 @@ header {
 
 .sobre-texto p {
     margin-bottom: 15px;
+    color: #cbd5e1;
 }
 
 
@@ -218,7 +224,7 @@ header {
 
 .secao-destaque {
     max-width: 100%;
-    background-color: #e6f2f0; /* Fundo alternativo suave em verde-água */
+    background-color: var(--cor-destaque-bg); /* Alterado de verde claro para o tom escuro avermelhado */
 }
 
 .secao-destaque > * {
@@ -240,16 +246,19 @@ header {
 
 .habilidade {
     background-color: var(--cor-card);
+    color: var(--cor-texto);
     padding: 15px 25px;
     border-radius: 8px;
     font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--cor-borda);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(254, 241, 222, 0.1);
+    transition: 0.2s ease;
 }
 
 .habilidade:hover {
     transform: translateY(-3px);
     border-color: var(--cor-principal);
+    background-color: var(--cor-destaque-bg);
 }
 
 
@@ -273,25 +282,26 @@ header {
 }
 
 .projetos-container::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--cor-fundo);
     border-radius: 10px;
 }
 
 .projetos-container::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
+    background: var(--cor-card);
     border-radius: 10px;
 }
 
 .projetos-container::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+    background: var(--cor-principal);
 }
 
 .projeto-card {
     background-color: var(--cor-card);
+    color: var(--cor-texto);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--cor-borda);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(254, 241, 222, 0.05);
     transition: 0.3s;
 
     flex: 0 0 calc(33.333% - 20px);
@@ -302,14 +312,14 @@ header {
 
 .projeto-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 8px 25px rgba(217, 4, 41, 0.2);
     border-color: var(--cor-principal);
 }
 
 .projeto-numero {
     font-size: 35px;
     font-weight: bold;
-    color: var(--cor-principal);
+    color: var(--cor-texto); /* Mudado para creme para se destacar no card vinho */
     margin-bottom: 15px;
 }
 
@@ -319,7 +329,7 @@ header {
 }
 
 .projeto-card p {
-    color: #475569;
+    color: #cbd5e1;
     margin-bottom: 20px;
 }
 
@@ -334,25 +344,26 @@ header {
 }
 
 .tecnologias span {
-    background-color: #ccfbf1; /* Fundo das tags combinando com a paleta */
-    color: #115e59;           /* Texto das tags em verde-água escuro */
+    background-color: var(--cor-destaque-bg); /* Tags agora usam o fundo escuro */
+    color: var(--cor-texto);                /* Texto das tags em creme */
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 13px;
     font-weight: bold;
+    border: 1px solid rgba(254, 241, 222, 0.1);
 }
 
 /* LINK DO PROJETO */
 
 .link-projeto {
-    color: var(--cor-principal);
+    color: var(--cor-texto);
     text-decoration: none;
     font-weight: bold;
 }
 
 .link-projeto:hover {
     text-decoration: underline;
-    color: var(--cor-principal-hover);
+    color: var(--cor-principal);
 }
 
 
@@ -373,12 +384,12 @@ header {
     padding: 25px;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--cor-borda);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(254, 241, 222, 0.05);
 }
 
 .contato-item h3 {
-    color: var(--cor-principal);
+    color: var(--cor-texto);
     margin-bottom: 5px;
 }
 
@@ -396,6 +407,7 @@ header {
     border-radius: 6px;
 
     font-weight: bold;
+    transition: background 0.2s ease;
 }
 
 .contato-item a:hover {
@@ -412,6 +424,7 @@ footer {
     color: #cbd5e1;
     text-align: center;
     padding: 30px;
+    border-top: 1px solid rgba(244, 241, 222, 0.1);
 }
 
 footer a {
@@ -421,25 +434,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-
-/* ==============================================
-    RESPONSIVIDADE 
-============================================== */
-
-/* Tablets e Celulares Grandes */
-@media (max-width: 800px) {
-    /* MENU */
-    .menu-toggle {
-        display: flex; 
-    }
-
-    .navbar {
-        position: relative;
-    }
-
-    .menu {
-        position: absolute;
-    }
 }
