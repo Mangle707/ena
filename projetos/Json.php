@@ -1,7 +1,7 @@
 <?php
 
 //1. DECLARA O CAMINHO DO ARQUIVO JSON
-$caminho = __DIR__ . "../dados.json";
+$caminho = __DIR__ . "/../dados.json";
 
 // 2. ABRIR/LER ARQUIVOS
 $json = file_get_contents($caminho);
@@ -128,6 +128,8 @@ echo "OS DADOS ENVIADOS PARA JSON NO ARQUIVO dados.json";
     <button type="submit" name="acao" value="deletar">Deletar</button>
  </form>
 
-
+         <form action="index.php" method="GET">
+            <button type="submit">Volte para o Menu Delta</button>
+         </form>
 </body>
 </html>
