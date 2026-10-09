@@ -1,5 +1,5 @@
 /* ==============================================
-    ESTILO TI DARK MODE (CYBER TEAL / NEON)
+    ESTILO TI DARK MODE (CYBER TEAL / NEON) - COMPLETO E CORRIGIDO
 ============================================== */
 :root {
     --fundo-pagina: #0f172a;   /* Grafite ultra escuro (estilo VS Code / Terminal) */
@@ -73,6 +73,14 @@ header h1 {
     color: var(--cor-neon);    /* Números brilhando em verde */
 }
 
+/* LISTAGEM DE CHAMADOS (CORREÇÃO DE EMPILHAMENTO VERTICAL) */
+.grid-chamados {
+    display: flex;
+    flex-direction: column;    /* Garante que os chamados fiquem um embaixo do outro */
+    gap: 15px;
+    width: 100%;
+}
+
 /* CAIXAS GERAIS (CADASTRO E CHAMADOS) */
 .secao-cadastro, .card-chamado {
     background: var(--fundo-card);
@@ -80,6 +88,8 @@ header h1 {
     padding: 20px;
     border-radius: 6px;
     margin-bottom: 20px;
+    width: 100%;               /* Força ocupação completa sem limitar a 3 itens */
+    box-sizing: border-box;
 }
 
 h2 {
@@ -129,7 +139,7 @@ textarea {
     height: 70px;
 }
 
-/* BOTÕES */
+/* BOTÕES GERAIS */
 button {
     padding: 9px 16px;
     border-radius: 4px;
@@ -146,13 +156,16 @@ button:hover {
     background-color: #475569;
 }
 
-button[type="submit"]:not(.card-chamado button) {
+/* BOTÃO CADASTRAR (Destaque Blindado e Sem Conflitos com o Card) */
+.secao-cadastro button[type="submit"] {
     background-color: var(--cor-principal);
     color: #0f172a;
     border: none;
+    width: 100%;               /* Ocupa toda a largura da caixa de cadastro */
+    margin-top: 10px;
 }
 
-button[type="submit"]:not(.card-chamado button):hover {
+.secao-cadastro button[type="submit"]:hover {
     background-color: var(--cor-hover);
 }
 
@@ -171,11 +184,36 @@ button[type="submit"]:not(.card-chamado button):hover {
     border: 1px solid var(--borda);
     border-radius: 4px;
     color: #cbd5e1;
+    padding: 12px !important;
+    margin: 8px 0 !important;
 }
 
+/* Alinhamento dos formulários de ações no rodapé do card */
 .card-chamado form {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     margin-right: 15px;
+    margin-top: 10px;
+}
+
+.card-chamado select {
+    padding: 6px;
+    background-color: #0f172a;
+}
+
+.card-chamado button {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+/* Força o botão de Excluir do card a ter o destaque vermelho correto */
+.card-chamado form button[style*="color: red"] {
+    color: #fca5a5 !important;
+    background-color: #7f1d1d;
+    border-color: #991b1b;
+}
+
+.card-chamado form button[style*="color: red"]:hover {
+    background-color: #991b1b;
 }
