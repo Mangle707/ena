@@ -1,0 +1,155 @@
+
+
+:root {
+    --azul-escuro: #1e3a8a;    /* Topo e botões principais */
+    --azul-link: #3b82f6;      /* Links e destaques */
+    --azul-hover: #1d4ed8;     /* Hover do botão */
+    --fundo-pagina: #121d33;   /* Cinza claro para o fundo */
+    --fundo-card: #141313;     /* Branco para os blocos */
+    --borda: #d1d5db;          /* Contornos sutis */
+    --texto: #ffffff;          
+    --texto-mutado: #aaabac;   
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--fundo-pagina);
+    color: var(--texto);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* TOPALHA / HEADER */
+header {
+    background-color: var(--azul-escuro);
+    color: white;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+/* PAINEL DE ESTATÍSTICAS */
+.painel-relatorio {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card-relatorio {
+    flex: 1;
+    background: var(--fundo-card);
+    border: 1px solid var(--borda);
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.card-relatorio h3 {
+    margin: 0;
+    font-size: 12px;
+    color: var(--texto-mutado);
+    text-transform: uppercase;
+}
+
+.card-relatorio p {
+    margin: 5px 0 0 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--azul-link);
+}
+
+/* CAIXAS GERAIS (CADASTRO E CHAMADOS) */
+.secao-cadastro, .card-chamado {
+    background: var(--fundo-card);
+    border: 1px solid var(--borda);
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* FORMULÁRIO */
+.campo-grupo {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.campo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input, select, textarea {
+    padding: 8px;
+    border: 1px solid var(--borda);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+    height: 70px;
+}
+
+/* BOTÕES DE ENVIO */
+button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid var(--borda);
+    background-color: #f3f4f6;
+}
+
+button[type="submit"]:not(.card-chamado button) {
+    background-color: var(--azul-escuro);
+    color: white;
+    border: none;
+}
+
+button[type="submit"]:not(.card-chamado button):hover {
+    background-color: var(--azul-hover);
+}
+
+/* MENSAGENS */
+.sucesso { background: #d1fae5; color: #065f46; padding: 10px; border-radius: 4px; margin-bottom: 20px; font-weight: bold; }
+.erro { background: #fee2e2; color: #991b1b; padding: 10px; border-radius: 4px; margin-bottom: 20px; font-weight: bold; }
+
+/* LINHAS DE DADOS DO CHAMADO */
+.card-chamado div {
+    margin-bottom: 8px;
+}
+
+.card-chamado form {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 15px;
+}
+
