@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD']=== 'POST'){
             $mensagem = "<p class='erro'>Erro ao excluir o chamado ou registro inexistente.</p>";
         }
     }
-}
+}.
 
 // Busca as informações atualizadas do JSON para a exibição na página
 $chamadosAtuais = listarChamados();
