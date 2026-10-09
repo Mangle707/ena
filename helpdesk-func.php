@@ -50,4 +50,23 @@ function cadastrarChamado(string $solicitante, string $setor, string $equipament
     $chamados[] = $novoChamado;
     return salvarChamados($chamados);
 }
+
+
+    // UPDATE
+  function atualizarStatusChamado(int $id, string $novoStatus): bool {
+    if (!in_array($novoStatus, STATUSES)) {
+        return false;
+    }
+
+    $chamados = listarChamados();
+
+    
+    if (!isset($chamados[$id])) {
+        return false;
+    }
+
+    $chamados[$id]['status'] = $novoStatus;
+    return salvarChamados($chamados);
+      }
+
 ?>
