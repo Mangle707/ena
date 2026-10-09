@@ -3,13 +3,13 @@
 ============================================== */
 
 :root {
-    --cor-principal: #0d9488;       /* Verde-água/Teal moderno */
-    --cor-principal-hover: #0f766e; /* Verde-água escuro para hover */
-    --cor-fundo: #f4f7f6;           /* Fundo geral limpo com leve toque verde-água */
-    --cor-texto: #111827;           /* Texto principal escuro */
-    --cor-card: #ffffff;            /* Fundo dos cards e caixas */
+    --cor-principal: #d13b00;       /* Verde-água/Teal moderno */
+    --cor-principal-hover: #76380f; /* Verde-água escuro para hover */
+    --cor-fundo: #181614;           /* Fundo geral limpo com leve toque verde-água */
+    --cor-texto: #af502b;           /* Texto principal escuro */
+    --cor-card: #221404;            /* Fundo dos cards e caixas */
     --cor-borda: #ccdbd8;           /* Cor para contornos/linhas subtis em tom esverdeado */
-    --cor-destaque-bg: #042f2e;     /* Fundo verde-água ultra escuro para secções de destaque (Início, Footer) */
+    --cor-destaque-bg: #2f0904;     /* Fundo verde-água ultra escuro para secções de destaque (Início, Footer) */
 }
 
 * {

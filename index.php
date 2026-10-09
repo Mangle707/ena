@@ -48,7 +48,7 @@
      <h2 class="Titulo-secao">Sobre mim</h2>
      <div class="sobre-conteudo">
           <div class="foto">
-               JS
+               
           </div>
           <div class="sobre-texto">
                <h3>Quem sou eu?</h3>
