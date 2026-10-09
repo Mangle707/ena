@@ -100,12 +100,15 @@ echo "OS DADOS ENVIADOS PARA JSON NO ARQUIVO dados.json";
 
  
 
-    <h2>Alunos Cadastrados</h2>
-    <?php foreach($alunos as $aluno) { ?>
-     <h3><?= $aluno["nome"] ?></h3>
-      <p>Idade: <?= $aluno["idade"] ?></p>
-      <p>Curso: <?= $aluno["curso"] ?></p>
-    <?php } ?>
+ <h2>Alunos Cadastrados</h2>
+<?php foreach($alunos as $aluno) { ?>
+    <div class="card-aluno">
+        <h3><?= $aluno["nome"] ?></h3>
+        <p>Idade: <?= $aluno["idade"] ?></p>
+        <p>Curso: <?= $aluno["curso"] ?></p>
+    </div>
+<?php } ?>
+
     <h2>Atualizar Cadastrados</h2>
 <form method="POST">
     <label>nome: </label>
