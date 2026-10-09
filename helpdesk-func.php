@@ -52,7 +52,7 @@ function cadastrarChamado(string $solicitante, string $setor, string $equipament
 }
 
 
-    // UPDATE
+    // UPDATE                        //nova variavel
   function atualizarStatusChamado(int $id, string $novoStatus): bool {
     if (!in_array($novoStatus, STATUSES)) {
         return false;
@@ -68,5 +68,49 @@ function cadastrarChamado(string $solicitante, string $setor, string $equipament
     $chamados[$id]['status'] = $novoStatus;
     return salvarChamados($chamados);
       }
+
+      // DELETE
+     function excluirChamado(int $id): bool {
+        $chamados = listarChamados();
+
+    
+        if (!isset($chamados[$id])) {
+               return false;
+           }
+
+           unset($chamados[$id]);
+                $chamados = array_values($chamados);
+
+           return salvarChamados($chamados);
+}
+
+   //para geraraçao de RELATORIO
+
+   function gerarRelatorio(): array {
+
+    $chamados = listarChamados();
+
+    $relatorio = [
+        'total' => count($chamados),
+        'abertos' => 0,
+        'em_andamento' => 0,
+        'resolvidos' => 0
+    ];
+
+      foreach ($chamados as $chamado) {
+        if ($chamado['status']=== 'Aberto'){
+            $relatorio['abertos']++;
+        }
+        else if ($chamado['status']=== 'Em andamento'){
+            $relatorio['em_andamento']++;
+
+        }
+        else if ($chamado['status'] === 'Resolvido'){
+            $relatorio['resolvido']++;
+        }
+      }
+
+      return $relatorio;
+   }
 
 ?>
