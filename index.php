@@ -209,7 +209,24 @@
                > Ver projeto <
            </a>
          </div>
+         <div class="projeto-card">
+           <div class="projeto-numero">
+               02
+           </div>
+           <h3>Atividade de cadastro usando JSON</h3>
+           <p>
+               sistema desenvolvido para cadastrar pessoas e salvar em JSON.
+           </p>
+           <div class="tecnologias">
+               <span>HTML</span>
+               <span>PHP</span>
+           </div>
+           <a href="projetos/Json.php" class="link-projeto">
+               > Ver projeto <
+           </a>
+         </div>
 
+         
         </div>
     </section>
     <section id="contato" class="secao secao-destaque">
@@ -220,7 +237,7 @@
      <div class="contato-container">
           <div class="contato-item">
                <h3>Whatsapp</h3>
-               <p></p>
+               <p>(41) 9586-5778</p>
           </div>
           <div class="contato-item">
                <h3>GitHub</h3>
