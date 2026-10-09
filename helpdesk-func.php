@@ -14,6 +14,22 @@ function listarChamados(): array {// isso le o arquivo JSON e retorna um array n
     $conteudo = file_get_contents(CAMINHO_JSON);
     $dados = json_decode($conteudo, true);
     return is_array($dados) ? $dados : [];
+
+    $pesoPrioridade = [
+        'Alta'  => 3,
+        'Média' => 2,
+        'Baixa' => 1
+    ];
+
+    usort($chamados, function($a, $b) use ($pesoPrioridade) {
+        $prioridadeA = $pesoPrioridade[$a['prioridade']] ?? 0;
+        $prioridadeB = $pesoPrioridade[$b['prioridade']] ?? 0;
+
+        // O operador <=> faz a comparação decrescente (B para A)
+        return $prioridadeB <=> $prioridadeA;
+    });
+
+    return $chamados;
 }
 
 // Aqui vai salvar o array de chamados de volta no arquivo JSON
@@ -94,7 +110,7 @@ function cadastrarChamado(string $solicitante, string $setor, string $equipament
         'total' => count($chamados),
         'abertos' => 0,
         'em_andamento' => 0,
-        'resolvidos' => 0
+        'resolvido' => 0
     ];
 
       foreach ($chamados as $chamado) {
