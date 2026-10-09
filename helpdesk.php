@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD']=== 'POST'){
             $mensagem = "<p class='erro'>Erro ao excluir o chamado ou registro inexistente.</p>";
         }
     }
-}.
+}
 
 // Busca as informações atualizadas do JSON para a exibição na página
 $chamadosAtuais = listarChamados();
@@ -56,14 +56,37 @@ $estatisticas = gerarRelatorio();
     <title>HelpDesk</title>
 </head>
 <body>
-     <form method="POST">
-        <label>nome: </label>
-        <input  type="text" name="nome" id="nome">
-        <label>idade: </label>
-        <input  type="number" name="idade" id="idade">
-        <label>curso: </label>
-        <input  type="text" name="curso" id="curso">
-        <button type="submit" name="acao" value="cadastrar">Cadastrar</button>
-      </form>
+    <div class="container">
+        <header>
+            <h1>Helpdesk TI - Gerenciamento de Chamadas</h1>
+        </header>
+        
+        <div class="painel-relatorio">
+            <div class="card-relatorio">
+                <h3>Registrados</h3>
+                <p><?= $estatisticas['total']?></p>
+            </div>
+            <div class="card-relatorio">
+            <h3>Abertos</h3>
+            <p><?= $estatisticas['abertos'] ?></p>
+        </div>
+        <div class="card-relatorio">
+            <h3>Em andamento</h3>
+            <p><?= $estatisticas['em_andamento'] ?></p>
+        </div>
+        <div class="card-relatorio">
+            <h3>Resolvidos</h3>
+            <p><?= $estatisticas['resolvidos'] ?></p>
+        </div>
+    </div>
+        
+    <?= $mensagem ?>
+
+<!-- Seçao de abertura de chamados (Create)-->
+     <div class="secao-cadastro">
+
+     </div>
+
+</div>
 </body>
 </html>
