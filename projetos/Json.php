@@ -128,7 +128,7 @@ echo "OS DADOS ENVIADOS PARA JSON NO ARQUIVO dados.json";
     <button type="submit" name="acao" value="deletar">Deletar</button>
  </form>
 
-         <form action="index.php" method="GET">
+         <form action="../index.php" method="GET">
             <button type="submit">Volte para o Menu Delta</button>
          </form>
 </body>

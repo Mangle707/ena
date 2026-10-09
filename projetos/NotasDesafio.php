@@ -64,7 +64,7 @@
 
                 <button type="submit">Enviar</button>
             </form>
-            <form action="index.php" method="GET">
+            <form action="../index.php" method="GET">
             <button type="submit">Volte para o Menu Delta</button>
          </form>
         </div>

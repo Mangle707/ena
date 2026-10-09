@@ -192,6 +192,9 @@ $estatisticas = gerarRelatorio();
     </div>
 
 </div> 
-        
+       <form action="../index.php" method="GET">
+           <button type="submit">Volte para o Menu Delta</button>
+        </form>
+  
 </body>
 </html>
