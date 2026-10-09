@@ -41,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
               </form>
             </div>
             <h1><?= $resultado ?></h1>
-            <form action="projetos/index.php" method="GET">
+            <form action="../index.php" method="GET">
             <button type="submit">Volte para o Menu Delta</button>
          </form>
         </div>
