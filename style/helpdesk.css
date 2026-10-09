@@ -1,12 +1,15 @@
+/* ==============================================
+    ESTILO TI DARK MODE (CYBER TEAL / NEON)
+============================================== */
 :root {
-    --fundo-pagina: #0f172a; 
-    --fundo-card: #1e293b;     
-    --cor-principal: #0ca5e9;  
-    --cor-neon: #22c55e;       
-    --cor-hover: #0284c7;      
-    --borda: #334155;          
-    --texto: #f8fafc;          
-    --texto-mutado: #94a3b8;   
+    --fundo-pagina: #0f172a;   /* Grafite ultra escuro (estilo VS Code / Terminal) */
+    --fundo-card: #1e293b;     /* Cinza azulado escuro para os blocos */
+    --cor-principal: #0ca5e9;  /* Ciano / Azul Elétrico para o topo e botões */
+    --cor-neon: #22c55e;       /* Verde Neon para os números e sucessos */
+    --cor-hover: #0284c7;      /* Ciano escuro para o efeito de hover */
+    --borda: #334155;          /* Linhas divisórias escuras de baixo contraste */
+    --texto: #f8fafc;          /* Texto principal quase branco, descansando os olhos */
+    --texto-mutado: #94a3b8;   /* Cinza claro para subtítulos e labels */
 }
 
 body {
@@ -26,7 +29,7 @@ body {
 /* CABEÇALHO / HEADER */
 header {
     background-color: var(--cor-principal);
-    color: #0f172a;
+    color: #0f172a;            /* Texto escuro no topo para dar contraste alto */
     padding: 18px;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -67,7 +70,7 @@ header h1 {
     margin: 5px 0 0 0;
     font-size: 26px;
     font-weight: bold;
-    color: var(--cor-neon);
+    color: var(--cor-neon);    /* Números brilhando em verde */
 }
 
 /* CAIXAS GERAIS (CADASTRO E CHAMADOS) */
@@ -83,7 +86,7 @@ h2 {
     font-size: 18px;
     margin-top: 0;
     margin-bottom: 15px;
-    color: var(--cor-principal);
+    color: var(--cor-principal); /* Títulos das seções em ciano */
 }
 
 /* FORMULÁRIO */
@@ -106,19 +109,19 @@ label {
     color: var(--texto-mutado);
 }
 
-/* Customização dos Inputs */
+/* Customização dos Inputs para combinar com o Dark Mode */
 input, select, textarea {
     padding: 10px;
     border: 1px solid var(--borda);
     border-radius: 4px;
     font-size: 14px;
-    background-color: #0f172a;
+    background-color: #0f172a; /* Inputs escuros */
     color: var(--texto);
     outline: none;
 }
 
 input:focus, select:focus, textarea:focus {
-    border-color: var(--cor-principal);
+    border-color: var(--cor-principal); /* Borda acende ao clicar */
 }
 
 textarea {
@@ -126,7 +129,7 @@ textarea {
     height: 70px;
 }
 
-/* BOTÕES - REGRAS SIMPLIFICADAS E SEGURAS */
+/* BOTÕES */
 button {
     padding: 9px 16px;
     border-radius: 4px;
@@ -143,20 +146,17 @@ button:hover {
     background-color: #475569;
 }
 
-/* Aplica o estilo destacado APENAS no botão principal de Cadastrar */
-.secao-cadastro button[type="submit"] {
+button[type="submit"]:not(.card-chamado button) {
     background-color: var(--cor-principal);
     color: #0f172a;
     border: none;
-    width: 100%; /* Facilita o clique ocupando a largura total do bloco */
-    margin-top: 10px;
 }
 
-.secao-cadastro button[type="submit"]:hover {
+button[type="submit"]:not(.card-chamado button):hover {
     background-color: var(--cor-hover);
 }
 
-/* MENSAGENS */
+/* MENSAGENS COM CORES MAIS SUAVES PARA O ESCURO */
 .sucesso { background: #064e3b; color: #6ee7b7; padding: 12px; border-radius: 4px; margin-bottom: 20px; font-weight: bold; border-left: 4px solid var(--cor-neon); }
 .erro { background: #7f1d1d; color: #fca5a5; padding: 12px; border-radius: 4px; margin-bottom: 20px; font-weight: bold; border-left: 4px solid #ef4444; }
 
@@ -165,21 +165,17 @@ button:hover {
     margin-bottom: 8px;
 }
 
-/* Formulários Inline dentro dos cards */
+/* Estilização da caixinha interna onde fica a descrição do problema */
+.card-chamado div[style*="background"] {
+    background-color: #0f172a !important; /* Caixa interna mais escura */
+    border: 1px solid var(--borda);
+    border-radius: 4px;
+    color: #cbd5e1;
+}
+
 .card-chamado form {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     margin-right: 15px;
-    margin-top: 10px;
-}
-
-.card-chamado select {
-    padding: 6px;
-    background-color: #0f172a;
-}
-
-.card-chamado button {
-    padding: 6px 12px;
-    font-size: 12px;
 }
