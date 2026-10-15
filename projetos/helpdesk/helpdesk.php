@@ -18,12 +18,12 @@ if ($_SERVER['REQUEST_METHOD']=== 'POST'){
       
     //acao de cadastro
     if ($acao === 'cadastrar') {
-        $sucesso = cadastrarChamadas(
-        $_POST['solicitante'] ?? "";
-        $_POST['setor'] ?? "";
-        $_POST['equipamento']?? "";
-        $_POST['descricao'] ?? "";
-        $_POST['prioridade'] ?? "";
+        $sucesso = cadastrarChamado(
+        $_POST['solicitante'] ?? "",
+        $_POST['setor'] ?? "",
+        $_POST['equipamento']?? "",
+        $_POST['descricao'] ?? "",
+        $_POST['prioridade'] ?? "",
         );
 
         $mensagem = $sucesso ? "Chamado cadastrado com sucesso!" : "Erro ao cadastrar. Verifique os dados";
@@ -35,18 +35,26 @@ if ($_SERVER['REQUEST_METHOD']=== 'POST'){
         (int) ($_POST["posicao"] ?? -1),
         $_POST["status"] ?? ""
        );
+
        $mensagem = $sucesso ? "Status atualizado!" : "Nao foi possivel atualizar.";
     } 
     //exclui 
     if ($acao === 'excluir') {
-        
-       
+         $sucesso = excluirChamado(
+            (int) ($_POST["posicao"] ?? -1));
+
+            $mensagem = $sucesso ? "Chamado excluido!" : "Nao foi possivel excluir.";
     }
 }
 
 // Busca as informações atualizadas do JSON para a exibição na página
-$chamadosAtuais = listarChamados();
-$estatisticas = gerarRelatorio();
+$chamados = lerChamadas();
+$relatorio = gerarRelatorio();
+
+//Evita exibir HTML enviado pelo usuario
+function escapar($valor){
+    return htmlspecialchars((string) $valor, ENT_QUOTES, "UTF-8");
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
