@@ -1,5 +1,5 @@
 <?php 
-require_once "helpdesk-func.php";
+require_once "../helpdesk-func.php";
 
 $mensagem = "";
 
@@ -169,7 +169,7 @@ function escapar($valor){
                            <?= $chamado['descricao'] ?>
                         </div>
                     <div>
-                         Situação aAtual: <strong><?= $chamado['status'] ?></strong>
+                         Situação Atual: <strong><?= $chamado['status'] ?></strong>
                     </div>
 
 
