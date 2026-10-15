@@ -73,19 +73,19 @@ function escapar($valor){
         <div class="painel-relatorio">
             <div class="card-relatorio">
                 <h3>Registrados</h3>
-                <p><?= $estatisticas['total']?></p>
+                <p><?= $relatorio['total']?></p>
             </div>
             <div class="card-relatorio">
             <h3>Abertos</h3>
-            <p><?= $estatisticas['abertos'] ?></p>
+            <p><?= $relatorio['abertos'] ?></p>
         </div>
         <div class="card-relatorio">
             <h3>Em andamento</h3>
-            <p><?= $estatisticas['em_andamento'] ?></p>
+            <p><?= $relatorio['em_andamento'] ?></p>
         </div>
         <div class="card-relatorio">
             <h3>Resolvidos</h3>
-            <p><?= $estatisticas['resolvidos'] ?></p>
+            <p><?= $relatorio['resolvidos'] ?></p>
         </div>
     </div>
         
