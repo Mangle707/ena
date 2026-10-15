@@ -1,5 +1,5 @@
 <?php 
-require_once "../helpdesk-func.php";
+require_once "helpdesk-func.php";
 
 $mensagem = "";
 
