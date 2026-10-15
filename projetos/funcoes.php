@@ -134,6 +134,8 @@
         return salvarChamadas($chamados);
 
     }
+
+    //_______________________________________________________________________//
     //Relatorio de atendimentos
     function gerarRelatorio() {
         $chamados = lerChamadas();

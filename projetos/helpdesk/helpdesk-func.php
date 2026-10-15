@@ -1,126 +1,136 @@
 <?php
 
-const CAMINHO_JSON = __DIR__ . '/../dados/chamados.json'; //vai procurar o JSON por aqui
-const SECTORS = ['Produçao', 'Administrativo', 'Logistica', 'Financeiro', 'TI'];
-const EQUIPMENTS = ['Computador', 'Impressora', 'Rede', 'Sistema', 'Outro'];
-const PRIORITIES = ['Baixa', 'Média', 'Alta'];
-const STATUSES = ['Aberto', 'Em andamento', 'Resolvido'];
+ function lerChamadas(){
+       $arquivo = __DIR__ . "../chamados.json";
 
+       //verifica se o JSON arquivo existe 
+       if(!file_exists($arquivo)){
+            file_put_contents($arquivo, "[]");
+       }
+       // ler o arquivo
+       $conteudo = file_get_contents($arquivo);
 
-function listarChamados(): array {// isso le o arquivo JSON e retorna um array nativo do PHP
-    if (!file_exists(CAMINHO_JSON)) {
-        return [];
-    }
-    $conteudo = file_get_contents(CAMINHO_JSON);
-    $dados = json_decode($conteudo, true);
-    return is_array($dados) ? $dados : [];
-
-    $pesoPrioridade = [
-        'Alta'  => 3,
-        'Média' => 2,
-        'Baixa' => 1
-    ];
-
+       //converter o JSON para ARRAY php
+       $chamados = json_decode($conteudo, true);
     
+       return is_array($chamados) ? $chamados : [];// é como se fosse um if else
 
-   
-}
+    }
 
-// Aqui vai salvar o array de chamados de volta no arquivo JSON
-function salvarChamados(array $chamados): bool {
-    $conteudo = json_encode($chamados, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-    return file_put_contents(CAMINHO_JSON, $conteudo) !== false;
-}
+//                CORRECAO DO HELP DESK FUNC
 
-//realiza as validações obrigatórias
+//_______________________________________________________________________//
 
-function cadastrarChamado(string $solicitante, string $setor, string $equipamento, string $descricao, string $prioridade): bool {
-    $solicitante = trim($solicitante);
-    $descricao = trim($descricao);
+    //Salvar os chamados no json
+    function salvarChamadas($chamados){
+        $arquivo = __DIR__ . "../chamados.json";
+        return file_put_contents(
+            $arquivo, 
+            json_encode($chamados,  JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
+            )
+        ) !== false;
 
 
-  //validaçoes para o codigo
-    if (empty($solicitante) || empty($descricao)) {
+    }
+    
+//_______________________________________________________________________//
+    //CREATE - cadastrar chamadas
+    function cadastrarChamado($nome, $setor, $equipamento, $descricao, $prioridade) {
+
+    if(trim($nome) === "" || trim($descricao) === ""){
         return false;
     }
-    if (!in_array($setor, SECTORS) || !in_array($equipamento, EQUIPMENTS) || !in_array($prioridade, PRIORITIES)) {
-        return false;
-    }
-    $chamados = listarChamados();
-
+    $chamados = lerChamadas();
+    
     $novoChamado = [
-        'solicitante' => $solicitante,
-        'setor' => $setor,
-        'equipamento' => $equipamento,
-        'descricao' => $descricao,
-        'prioridade' => $prioridade,
-        'status' => 'Aberto'
+        "nome" => trim($nome),//trim vai tirar espaço em branco do começo e final apenas
+        "setor" => $setor,
+        "equipamento" => $equipamento,
+        "descricao" => trim($descricao),
+        "prioridade" => $prioridade,
+        "status" => "Aberto"
     ];
 
     $chamados[] = $novoChamado;
-    return salvarChamados($chamados);
-}
 
+    return salvarChamadas($chamados);
+    }
+ //_______________________________________________________________________//
+    //UPDATE - atualiza as chamadas
+    function atualizarChamado($posicao, $novoStatus) {
+          $chamados = lerChamadas();
 
-    // UPDATE                        //nova variavel
-  function atualizarStatusChamado(int $id, string $novoStatus): bool {
-    if (!in_array($novoStatus, STATUSES)) {
-        return false;
+          $statusPermitidos = [
+            "Aberto",
+            "Em anddamento",
+            "Resolvido"
+          ];
+        // isset() verifica se uma variavel ou posicao existe e nao contem null
+        // o ! inverte  o resultado
+        // portanto:
+        // "Se nao existir um chamado naquela posicao  encerre a funcao retornando false."
+          if(!isset($chamados[$posicao])) {
+            return false;
+          }
+        //in_array()verifica se um valor existe dentro de um array
+        //Nesse caso:
+        // - $novoStatus: valor que queremos procurar
+        // - $statusPermitidos: lista de valores aceitos
+        //true: exige comparaçao estrita.
+        // o ! significa que a condiçao sera verdadeira quando o valor nao estiver na lista
+          if (!in_array($novoStatus, $statusPermitidos, true)){
+            return false; 
+          }
+
+          $chamados[$posicao]["status"] = $novoStatus;
+          
+          return salvarChamadas($chamados);
+
+    }
+//_______________________________________________________________________//
+    //DELETE - Excluir chamados
+    function excluirChamado($posicao) {
+        $chamados = lerChamadas();
+
+        if (!isset($chamados[$posicao])) {
+            return false;
+        }
+
+        //DELETE aquela posicao especifica
+        unset($chamados[$posicao]);
+
+        //ATUALIZAR alista de chamados em array
+        $chamados = array_values($chamados);
+
+        //SALVAR os chamados novamente pela funcao
+        return salvarChamadas($chamados);
+
     }
 
-    $chamados = listarChamados();
+    //_______________________________________________________________________//
+    //Relatorio de atendimentos
+    function gerarRelatorio() {
+        $chamados = lerChamadas();
 
-    
-    if (!isset($chamados[$id])) {
-        return false;
+        $relatorio = [
+            "total" => count($chamados),
+            "abertos" => 0,
+            "andamento" => 0,
+            "resolvidos" => 0
+        ];
+
+        foreach ($chamados as $chamado) {
+            if ($chamado["status"]=== "Aberto"){
+                $relatorio["abertos"]++;
+            }
+            else if ($chamado["status"]=== "Em andamento"){
+                $relatorio["andamento"]++;
+            }
+            else if ($chamado["status"]=== "Resolvido"){
+                $relatorio["resolvidos"]++;
+            }
+        }
+        return $relatorio;
+
     }
-
-    $chamados[$id]['status'] = $novoStatus;
-    return salvarChamados($chamados);
-      }
-
-      // DELETE
-     function excluirChamado(int $id): bool {
-        $chamados = listarChamados();
-
-    
-        if (!isset($chamados[$id])) {
-               return false;
-           }
-
-           unset($chamados[$id]);
-                $chamados = array_values($chamados);
-
-           return salvarChamados($chamados);
-}
-
-   //para geraraçao de RELATORIO
-
-   function gerarRelatorio(): array {
-
-    $chamados = listarChamados();
-
-    $relatorio = [
-        'total' => count($chamados),
-        'abertos' => 0,
-        'em_andamento' => 0,
-        'resolvido' => 0
-    ];
-
-      foreach ($chamados as $chamado) {
-        if ($chamado['status']=== 'Aberto'){
-            $relatorio['abertos']++;
-        }
-        else if ($chamado['status']=== 'Em andamento'){
-            $relatorio['em_andamento']++;
-
-        }
-        else if ($chamado['status'] === 'Resolvido'){
-            $relatorio['resolvido']++;
-        }
-      }
-
-      return $relatorio;
-   }
-
 ?>
