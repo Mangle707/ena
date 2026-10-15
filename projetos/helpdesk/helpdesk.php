@@ -1,46 +1,45 @@
 <?php 
-require_once "../helpdesk-func.php";
+require_once "helpdesk-func.php";
 
 $mensagem = "";
 
 //para processar os formularios do post
 if ($_SERVER['REQUEST_METHOD']=== 'POST'){
-    $acao = $_POST['acao'];
+    //O operador ?? é chamado de operador de coalescencia nula
+    //ele significa:
+    //"utilize o valor de esquerda,
+    // se ele existir e nao for nulo. Caso contrario, utilize o valor a direita"
+    $acao = $_POST['acao'] ?? "";
+    //if (isset($_POST["acao"])){
+    //    $acao = $_POST["acao"];
+    //} else {
+    //     $acao = "";
+    // }
       
     //acao de cadastro
     if ($acao === 'cadastrar') {
-        $solicitante = $_POST['solicitante'];
-        $setor = $_POST['setor'];
-        $equipamento = $_POST['equipamento'];
-        $descricao = $_POST['descricao'];
-        $prioridade = $_POST['prioridade'];
+        $sucesso = cadastrarChamadas(
+        $_POST['solicitante'] ?? "";
+        $_POST['setor'] ?? "";
+        $_POST['equipamento']?? "";
+        $_POST['descricao'] ?? "";
+        $_POST['prioridade'] ?? "";
+        );
 
-        if (cadastrarChamado($solicitante, $setor, $equipamento, $descricao, $prioridade)) {
-            $mensagem = "<p class='sucesso'>Chamado registrado com sucesso!</p>";
-        } else {
-            $mensagem = "<p class='erro'>Falha ao registrar chamado. Verifique os campos obrigatórios.</p>";
-        }
+        $mensagem = $sucesso ? "Chamado cadastrado com sucesso!" : "Erro ao cadastrar. Verifique os dados";
+
     } 
         //atualiza
-    else if ($acao === 'atualizar') {
-        $id = isset($_POST['id']) ? (int)$_POST['id'] : -1;
-        $novoStatus = $_POST['status'] ?? '';
-
-        if (atualizarStatusChamado($id, $novoStatus)) {
-            $mensagem = "<p class='sucesso'>Status do chamado #$id atualizado!</p>";
-        } else {
-            $mensagem = "<p class='erro'>Erro ao atualizar o chamado.</p>";
-        }
+    if ($acao === 'atualizar') {
+       $sucesso = atualizarChamado(
+        (int) ($_POST["posicao"] ?? -1),
+        $_POST["status"] ?? ""
+       );
+       $mensagem = $sucesso ? "Status atualizado!" : "Nao foi possivel atualizar.";
     } 
     //exclui 
-    else if ($acao === 'excluir') {
-        $id = isset($_POST['id']) ? (int)$_POST['id'] : -1;
-
-        if (excluirChamado($id)) {
-            $mensagem = "<p class='sucesso'>Chamado #$id removido com sucesso!</p>";
-        } else {
-            $mensagem = "<p class='erro'>Erro ao excluir o chamado ou registro inexistente.</p>";
-        }
+    if ($acao === 'excluir') {
+       
     }
 }
 
