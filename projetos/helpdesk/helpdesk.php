@@ -169,7 +169,7 @@ function escapar($valor){
                            <?= $chamado['descricao'] ?>
                         </div>
                     <div>
-                         Situação Atual: <strong><?= $chamado['status'] ?></strong>
+                         Situação aAtual: <strong><?= $chamado['status'] ?></strong>
                     </div>
 
 
