@@ -186,7 +186,7 @@ header {
     gap: 50px;
     margin-top: 40px;
 }
-
+/*Minha imagem foto*/
 .foto {
     width: 200px;
     height: 200px;
@@ -194,7 +194,7 @@ header {
     border-radius: 50%;
     background-color: var(--cor-principal);
     color: white;
-    background-image: url(../style/IMG/minhafoto.jpg);
+    background-image: url(../css/images/minhafoto.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
