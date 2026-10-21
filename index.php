@@ -11,7 +11,7 @@
 
    //Verificando se a rota existe e se nao existir defina status 404
    if(!isset($rotas[$metodo][$rota])) {
-     htt_response_code(404);
+     http_response_code(404);
      echo "Pagina nao encontrada";
      exit;
    }
@@ -21,7 +21,7 @@
    [$metodo][$rota];
 
    //
-   $controller -> $acao;
+   $controller -> $acao();
 
 
 
