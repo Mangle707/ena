@@ -1,7 +1,7 @@
 <?php
 
  function lerChamadas(){
-       $arquivo = __DIR__ . "../../chamados.json";
+       $arquivo = __DIR__ . "/chamados.json";
 
        //verifica se o JSON arquivo existe 
        if(!file_exists($arquivo)){
