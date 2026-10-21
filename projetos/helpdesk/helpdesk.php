@@ -62,7 +62,7 @@ function escapar($valor){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HelpDesk</title>
-    <link rel="stylesheet" href="../style/helpdesk.css">
+    <link rel="stylesheet" href="../../style/helpdesk.css">
 </head>
 <body>
     <div class="container">
