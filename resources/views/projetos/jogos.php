@@ -1,5 +1,5 @@
 <?php
-  require __DIR__ . "../../conexao.php";
+  require __DIR__ . "/conexao.php";
   
   $nome = "";
   $genero = "";
