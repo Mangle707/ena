@@ -194,7 +194,7 @@ header {
     border-radius: 50%;
     background-color: var(--cor-principal);
     color: white;
-    background-image: url(../css/images/minhafoto.jpg);
+    background-image: url(../images/minhafoto.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
