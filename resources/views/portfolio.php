@@ -144,7 +144,7 @@
                <span>CSS</span>
                <span>PHP</span>
            </div>
-           <a href="projetos/notas.php" class="link-projeto">
+           <a href="/index.php?rota=notas" class="link-projeto">
                > Ver projeto <
            </a>
          </div>

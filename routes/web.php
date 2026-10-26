@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../app/Http/Controllers/PortfolioController.php';
 require_once __DIR__ . '/../app/Http/Controllers/IdadeController.php';
+require_once __DIR__ . '/../app/Http/Controllers/NotasController.php';
 
 require_once __DIR__ . '/../app/Http/Controllers/LoginController.php';
 
@@ -16,7 +17,7 @@ return [
           
           'jogos' => [new JogosController(), 'index'],
           'idade' => [new IdadeController(), 'index'],
-          //'notas' => [],
+          'notas' => [new NotasController(), 'index'],
           //'NotasDesafio' => []
           //'funcoes' => [],
           //'json' => [],
