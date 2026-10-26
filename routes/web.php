@@ -27,7 +27,12 @@ return [
      ],   
         'POST' => [
               //'helpdesk' => [new HelpdeskController(), '']    
-              'login-basico' => [new LoginController(), 'index'],//teste
+              'login-basico' => [new LoginController(), 'index'],//teste 'SUCESSO'
+              'idade' => [new IdadeController(), 'index'],
+              'notas' => [new NotasController(), 'index'],
+              'NotasDesafio' => [new NotasDController(), 'index'],
+              'jogos' => [new JogosController(), 'index'],
+              'Json' => [new JsonController(), 'index'],
               ]
 ];
 
