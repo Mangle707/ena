@@ -246,7 +246,7 @@
                <span>PHP</span>
                <span>JSON</span>
            </div>
-           <a href="views/projetos/helpdesk.php" class="link-projeto">
+           <a href=".\app\Http\Controllers\HelpdeskController.php" class="link-projeto">
                > Ver projeto <
            </a>
          </div>
