@@ -123,7 +123,7 @@
                <span>CSS</span>
                <span>PHP</span>
            </div>
-           <a href="views/projetos/idade.php" class="link-projeto">
+           <a href="/index.php?rota=idade" class="link-projeto">
                > Ver projeto <
            </a>
          </div>

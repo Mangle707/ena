@@ -200,7 +200,7 @@ function escapar($valor){
     </div>
 
 </div> 
-       <form action="/../../portfolio.php" method="GET">
+       <form action="../index.php" method="GET">
            <button type="submit">Volte para o Menu Delta</button>
         </form>
   

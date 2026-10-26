@@ -10,7 +10,7 @@ return [
           'portfolio' => [new PortfolioController(), 'index'],
           //'helpdesk' => [new HelpdeskController(), 'helpdesk'],
           'jogos' => [new JogosController(), 'index'],
-         // 'idade' => [new IdadeController(), 'index'],
+          'idade' => [new IdadeController(), 'index'],
           //'funcoes' => [],
           //'json' => [],
           //'login-basico' => [],
