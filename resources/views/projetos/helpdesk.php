@@ -1,5 +1,5 @@
 <?php 
-require_once "funcoes.php";
+require_once "/../../Models/Chamado.php";//funcoes.php e Chamado.php semelhantes
 
 $mensagem = "";
 

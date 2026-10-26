@@ -14,6 +14,8 @@ class HelpdeskController{
          //caminho para o portfolio.php dentro do Views que ta no resources
          require __DIR__ . "/../../../resources/views/helpdesk.php";
     }
+
+
     // POST - Receber os formulários do Helpdesk
     public function salvar()
     {
@@ -54,7 +56,7 @@ class HelpdeskController{
         $chamados = $model->lerChamadas();//de LerChamados vira LerChamadas
         $relatorio = $model->gerarRelatorio();
  
-        require __DIR__ . "/../../../resources/Views/projetos/helpdesk.php";
+        require __DIR__ . "/../../../resources/views/projetos/helpdesk.php";
     }
 }
 

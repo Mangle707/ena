@@ -22,11 +22,13 @@ return [
           'jogos' => [new JogosController(), 'index'],
           'login-basico' => [new LoginController(), 'index'],
           'Json' => [new JsonController(), 'index'],
+          
           'helpdesk' => [new HelpdeskController(), 'helpdesk'],
 
      ],   
         'POST' => [
               'helpdesk' => [new HelpdeskController(), 'index'],    
+
               'login-basico' => [new LoginController(), 'index'],//teste 'SUCESSO'
               'idade' => [new IdadeController(), 'index'],
               'notas' => [new NotasController(), 'index'],
