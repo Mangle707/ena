@@ -1,5 +1,5 @@
 <?php 
-require_once "helpdesk-func.php";
+require_once "funcoes.php";
 
 $mensagem = "";
 
@@ -200,7 +200,7 @@ function escapar($valor){
     </div>
 
 </div> 
-       <form action="/../../index.php" method="GET">
+       <form action="/../../portfolio.php" method="GET">
            <button type="submit">Volte para o Menu Delta</button>
         </form>
   
