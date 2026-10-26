@@ -1,5 +1,7 @@
 <?php
 
+
+//PERTENCE AO HELPDESK
 class Chamado{
     public function lerChamadas(){
         $arquivo = __DIR__ . "/chamados.json";
