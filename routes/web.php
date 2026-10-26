@@ -18,7 +18,7 @@ return [
 
      ],   
         'POST' => [
-              //'helpdesk' => [new HelpdeskController(), '']    
+              'helpdesk' => [new HelpdeskController(), '']    
               ]
 ];
 
