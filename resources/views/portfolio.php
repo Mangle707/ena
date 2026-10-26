@@ -185,7 +185,7 @@
                <span>CSS</span>
                <span>PHP</span>
            </div>
-           <a href="projetos/login-basico.php" class="link-projeto">
+           <a href="/index.php?rota=login-basico" class="link-projeto">
                > Ver projeto <
            </a>
          </div>
