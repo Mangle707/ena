@@ -224,7 +224,7 @@
                <span>PHP</span>
                <span>JSON</span>
            </div>
-           <a href="projetos/Json.php" class="link-projeto">
+           <a href="/index.php?rota=json" class="link-projeto">
                > Ver projeto <
            </a>
          </div>

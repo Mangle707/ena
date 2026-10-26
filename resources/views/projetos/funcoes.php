@@ -1,6 +1,7 @@
 <?php
 
-//      =    =  =MOSTRUARIO=  =   =
+//Isso pertence ao helpdesk.php nos projetos//
+//      =    =  = MOSTRUARIO =  =   =
      function apresentarSistema() {
         echo "Bem vindo(a) ao sistema Help Desk";
      }
