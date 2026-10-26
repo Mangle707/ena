@@ -25,9 +25,10 @@ return [
           //'helpdesk' => [new HelpdeskController(), 'helpdesk'],
 
      ],   
-        //'POST' => [
+        'POST' => [
               //'helpdesk' => [new HelpdeskController(), '']    
-            //  ]
+              'login-basico' => [new LoginController(), 'index'],//teste
+              ]
 ];
 
 

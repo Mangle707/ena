@@ -3,7 +3,7 @@ $nome = "sabrina";
 $senha = "12345";
 $resultado = "";
 
-if($_SERVER["REQUEST_METHOD"] == "GET"){//Trocado do POST para GET
+if($_SERVER["REQUEST_METHOD"] == "POST"){//Trocado do POST para GET
     $nome = $_POST["nome"];
     $senha = $_POST["senha"];
 
@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){//Trocado do POST para GET
        <h1 class = "Titulo">Atividade 3 (Login Basico) </h1>
        <h3>nome: sabrina  senha: 12345</h3>
          <div class="Forms">
-            <form action="" method="GET"><!--trocado do POST para GET-->
+            <form action="" method="POST"><!--trocado do POST para GET-->
                 <label for= "nome">Nome:</label>
                 <input type="text" id="nome" placeholder="Digite o nome" name="nome" required>
 
