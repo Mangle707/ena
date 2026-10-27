@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #332A29; /* Marrom escuro acinzentado de fundo */
+    background-color: #332A29; /* Marrom escuro da paleta */
     color: #F5F5F5;
     display: flex;
     justify-content: center;
@@ -16,48 +16,56 @@ body {
     padding: 20px;
 }
 
-/* Container Principal */
-.container {
+/* Seletores compatíveis com a escrita class=container e class=Forms do seu PHP */
+.container, [class="container"] {
     background-color: #33221F; /* Marrom bem escuro */
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     width: 100%;
     max-width: 450px;
     border: 1px solid #522821;
 }
 
-/* Formulários */
+.Forms, [class="Forms"] {
+    margin-bottom: 20px;
+}
+
+/* Formulários e Espaçamentos */
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
 }
 
 label {
     font-size: 0.95rem;
     font-weight: 600;
-    color: #852A1B; /* Vermelho queimado para destaque */
-    margin-bottom: -5px;
+    color: #852A1B; /* Vermelho queimado */
+    margin-top: 15px;
+    margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+label[for="nome"] {
+    margin-top: 0; /* Remove margem do primeiro label */
 }
 
 input[type="text"],
 input[type="number"] {
     background-color: #332A29;
-    border: 2px solid #522821; /* Marrom avermelhado */
+    border: 2px solid #522821;
     padding: 12px;
     border-radius: 6px;
     color: #FFF;
     font-size: 1rem;
     transition: all 0.3s ease;
+    margin-bottom: 5px;
 }
 
 input:focus {
     outline: none;
-    border-color: #B81D00; /* Vermelho vibrante ao focar */
+    border-color: #B81D00; /* Vermelho vibrante */
     box-shadow: 0 0 8px rgba(184, 29, 0, 0.4);
 }
 
@@ -73,22 +81,24 @@ button {
     cursor: pointer;
     transition: background 0.2s ease, transform 0.1s ease;
     text-transform: uppercase;
+    margin-top: 15px;
+    width: 100%;
 }
 
 button:hover {
-    background-color: #852A1B; /* Escurece no hover */
+    background-color: #852A1B;
 }
 
 button:active {
     transform: scale(0.98);
 }
 
-/* Botão de Voltar (Estilo Secundário) */
+/* Estilo específico para o botão de voltar */
 form[action="../index.php"] button {
     background-color: transparent;
     border: 2px solid #522821;
     color: #852A1B;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 form[action="../index.php"] button:hover {
@@ -96,19 +106,24 @@ form[action="../index.php"] button:hover {
     color: #FFF;
 }
 
-/* Bloco de Resultados */
+/* Textos de Resultado */
 h1 {
     font-size: 1.2rem;
     color: #FFF;
     font-weight: 500;
-    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+/* Remove o espaço excessivo causado pela tag <br> original */
+br {
+    display: none; 
 }
 
 p {
     font-size: 1.1rem;
-    margin: 15px 0;
-    padding: 10px;
-    background-color: #522821; /* Destaque para a resposta */
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #522821; /* Destaque em marrom avermelhado */
     border-left: 4px solid #B81D00;
     border-radius: 4px;
     font-weight: 600;
