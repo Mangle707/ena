@@ -93,9 +93,6 @@ class Guerreiro extends Personagem {
     }
 }
 
-//$guerreiro->atacar(); //metodo herdado
-//$guerreiro->defender(); //Metodo proprio
-
 class Mago extends Personagem{
     //sobre escreve o metodo classe pai (POLIMORFISMO)
      public function atacar(){
@@ -114,7 +111,6 @@ $personagens = [$guerreiro,$mago,$personagem];
 foreach($personagens as $p){
     $p->atacar();//laço para todos os personagens atacarem
 }
-$mago->atacar();     //herdado de personagem
 
 //link  https://sabrina315.devlook.xyz/resources/views/projetos/poo.php
 
