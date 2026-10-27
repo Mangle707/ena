@@ -38,10 +38,10 @@
 //_________________________________________________________________//
 
 //inicio do POO
-class Personagem {
+abstract class Personagem {
     public $nome;
-    private $vida = 100;//mudado para um encapsulamento
-    public $dano = 10;
+    private $vida;//mudado para um encapsulamento
+    public $dano;
 
     public function __construct($nome, $vida, $dano){
 //usando o construct e mais facil para nao ter que escrever os personages em uma linha separada
@@ -56,7 +56,7 @@ class Personagem {
     }
     // SETTER
     public function setVida($vida){
-       if($vida <= 0){
+       if($vida < 0){
          echo "Voce morreu\n";
         return;
        }
@@ -65,10 +65,8 @@ class Personagem {
 
     }
    //____________Funcao de ataque_________________//
-    public function atacar(){
-        echo "$this ->nome realizou um ataque!";
-//             esse (personagem) realizou um ataque
-    }
+   //Toda classe filha deverá implementar atacar()
+    abstract public function atacar();
 }
 //--------------------------------------------------------------//
 //$sabrina = new Personagem("sabrina", 100, 10);
@@ -100,18 +98,30 @@ class Mago extends Personagem{
      }
 }
 
+class Curandeiro extends Personagem {
+    public function atacar() {
+        //sobrescrevendo o metodo classe pai
+        echo"$this ->nome atacou com uma faca\n";
+    }
+    public function curar(Personagem $alvo, int $quantidade){
+        $novaVida = $alvo->getVida() + $quantidade;
+        $alvo->setVida($novaVida);
+        echo "$this->nome curou {$alvo->nome} em $quantidade HP!\n";
+    }
+}
 //declara tal personagem como MAGO e guerreiro
 
 $mago = new Mago("aurora", 50, 5);
 $guerreiro = new Guerreiro("sabrina", 100,10);
-$personagem = new Personagem("Sara", 10, 5);
+$curandeiro = new Curandeiro("Sara", 100, 5);
 
-$personagens = [$guerreiro,$mago,$personagem];
+$personagens = [$guerreiro,$mago,$curandeiro];
 
 foreach($personagens as $p){
     $p->atacar();//laço para todos os personagens atacarem
 }
 
+$curandeiro->curar($guerreiro,50);//aqui ele vai curar o guerreiro
 //link  https://sabrina315.devlook.xyz/resources/views/projetos/poo.php
 
 
