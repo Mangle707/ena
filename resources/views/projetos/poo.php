@@ -107,7 +107,7 @@ class Mago extends Personagem{
 
 $mago = new Mago("aurora", 50, 5);
 $guerreiro = new Guerreiro("sabrina", 100,10);
-$personagem = new personagem("Sara", 10, 5);
+$personagem = new Personagem("Sara", 10, 5);
 
 $personagens = [$guerreiro,$mago,$personagem];
 
@@ -116,7 +116,7 @@ foreach($personagens as $p){
 }
 $mago->atacar();     //herdado de personagem
 
-//link  https://sabrina315.xyz/resources/views/projetos/poo.php
+//link  https://sabrina315.devlook.xyz/resources/views/projetos/poo.php
 
 
 
