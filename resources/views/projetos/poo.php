@@ -87,7 +87,7 @@ class Guerreiro extends Personagem {
         echo "$this->nome atacou com uma espada\n";
     }
     public function defender(){
-        echo "$this-> nome levantou o escudo!";
+        echo "$this->nome levantou o escudo!";
     }
 }
 
@@ -101,7 +101,7 @@ class Mago extends Personagem{
 class Curandeiro extends Personagem {
     public function atacar() {
         //sobrescrevendo o metodo classe pai
-        echo "$this ->nome atacou com uma faca\n";
+        echo "$this->nome atacou com uma faca\n";
     }
     public function curar(Personagem $alvo, int $quantidade){
         $novaVida = $alvo->getVida() + $quantidade;
@@ -112,7 +112,7 @@ class Curandeiro extends Personagem {
 //declara tal personagem como MAGO e guerreiro
 
 $mago = new Mago("aurora", 50, 5);
-$guerreiro = new Guerreiro("sabrina", 100,10);
+$guerreiro = new Guerreiro("sabrina", 50,10);
 $curandeiro = new Curandeiro("Sara", 100, 5);
 
 $personagens = [$guerreiro,$mago,$curandeiro];
