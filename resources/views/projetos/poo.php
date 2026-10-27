@@ -86,7 +86,7 @@ $sabrina -> atacar(); // metodo proprio
 class Guerreiro extends Personagem {
     //sobre escreve o metodo classe pai (POLIMORFISMO)
     public function atacar(){
-        echo "$this->nome atacou com uma espada\n"
+        echo "$this->nome atacou com uma espada\n";
     }
     public function defender(){
         echo "$this-> nome levantou o escudo!";
