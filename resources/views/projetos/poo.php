@@ -101,7 +101,7 @@ class Mago extends Personagem{
 class Curandeiro extends Personagem {
     public function atacar() {
         //sobrescrevendo o metodo classe pai
-        echo"$this ->nome atacou com uma faca\n";
+        echo "$this ->nome atacou com uma faca\n";
     }
     public function curar(Personagem $alvo, int $quantidade){
         $novaVida = $alvo->getVida() + $quantidade;
