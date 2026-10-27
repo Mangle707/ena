@@ -71,14 +71,14 @@ class Personagem {
     }
 }
 //--------------------------------------------------------------//
-$sabrina = new Personagem("sabrina", 100, 10);
+//$sabrina = new Personagem("sabrina", 100, 10);
 
-$sabrina->setVida(20);//exemplo de alteracao de vida
+//$sabrina->setVida(20);//exemplo de alteracao de vida
 
-$Loona = new Personagem("Lonna", 100, 7);
-$aurora = new Personagem("aurora", 100, 20);
+//$Loona = new Personagem("Lonna", 100, 7);
+//$aurora = new Personagem("aurora", 100, 20);
 
-$sabrina -> atacar(); // metodo proprio
+//$sabrina -> atacar(); // metodo proprio
 //chama a funcao para o personagem atacar
 //--------------------------------------------------------------//
 
@@ -93,8 +93,8 @@ class Guerreiro extends Personagem {
     }
 }
 
-$guerreiro->atacar(); //metodo herdado
-$guerreiro->defender(); //Metodo proprio
+//$guerreiro->atacar(); //metodo herdado
+//$guerreiro->defender(); //Metodo proprio
 
 class Mago extends Personagem{
     //sobre escreve o metodo classe pai (POLIMORFISMO)
