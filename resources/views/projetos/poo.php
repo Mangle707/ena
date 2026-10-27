@@ -67,30 +67,50 @@ class Personagem {
    //____________Funcao de ataque_________________//
     public function atacar(){
         echo "$this ->nome realizou um ataque!";
-        //    esse    nome(personagem) realizou um ataque
+//             esse (personagem) realizou um ataque
     }
 }
-$sabrina = new Personagem("sabrina", 100, 10);
+//--------------------------------------------------------------//
+//$sabrina = new Personagem("sabrina", 100, 10);
 
-$sabrina->setVida(20);//exemplo de alteracao de vida
+//$sabrina->setVida(20);//exemplo de alteracao de vida
 
-$Loona = new Personagem("Lonna", 100, 7);
-$aurora = new Personagem("aurora", 100, 20);
+//$Loona = new Personagem("Lonna", 100, 7);
+//$aurora = new Personagem("aurora", 100, 20);
 
-$sabrina -> atacar(); // metodo proprio
+//$sabrina -> atacar(); // metodo proprio
 //chama a funcao para o personagem atacar
+//--------------------------------------------------------------//
 
 //EXEMPLO DE HERANCA
 class Guerreiro extends Personagem {
+    //sobre escreve o metodo classe pai (POLIMORFISMO)
+    public function atacar(){
+        echo "$this->nome atacou com uma espada\n"
+    }
     public function defender(){
         echo "$this-> nome levantou o escudo!";
     }
 }
-//declara o tal personagem como guerreiro
-$guerreiro = new Guerreiro("sabrina", 100,10);
 
 $guerreiro->atacar(); //metodo herdado
 $guerreiro->defender(); //Metodo proprio
+
+class Mago extends Personagem{
+    //sobre escreve o metodo classe pai (POLIMORFISMO)
+     public function atacar(){
+        echo "$this->nome lançou uma bola de fogo!\n";
+     }
+}
+
+//declara tal personagem como MAGO e guerreiro
+
+$mago = new Mago("aurora", 50, 5);
+$guerreiro = new Guerreiro("sabrina", 100,10);
+$personagem = new personagem("Sara", 10, 5);
+//$mago->atacar();     //herdado de personagem
+//$mago->lancarMagia();//Proprio de Mago
+
 
 
 
