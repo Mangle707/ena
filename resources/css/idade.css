@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #332A29; /* Marrom escuro da paleta */
+    background-color: #0d0b0c; /* Marrom escuro da paleta */
     color: #F5F5F5;
     display: flex;
     justify-content: center;
@@ -18,7 +18,7 @@ body {
 
 /* Seletores compatíveis com a escrita class=container e class=Forms do seu PHP */
 .container, [class="container"] {
-    background-color: #33221F; /* Marrom bem escuro */
+    background-color: #0d0b0c; /* Marrom bem escuro */
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
