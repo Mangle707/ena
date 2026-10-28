@@ -1,0 +1,36 @@
+--------------------ENTRADA NO TERMINAL---------------------------
+ssh sabrina315@193.111.116.99
+senha:56#########
+site:https://sabrina315.devlook.xyz/
+
+
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_AJUDA-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+        (1)Se git pull nao funcionar e der ABORTING
+   > no terminal <
+> cd..
+>rm -rf www
+>git clone linkRepositorio www
+
+________________________________________________________________________
+                (Codigos para o terminal)LINUX
+>ls  (Mostra o caminho)
+>mkdir teste (criar pasta)
+>cd teste (entrar pasta)
+>cd.. (Sair da pasta)
+
+>nano teste.txt (Cria arquivo txt)
+"CTRL X" depois "y Enter" para salvar
+
+>rm teste.txt (Remover aquivo txt)
+>rm -r teste (Remove pasta)
+
+>clear (limpar historico)
+>cp "nome pasta" "nome copia"(copiar arquivo)
+>mv "origem" "destino"(mover para outra pasta)
+
+>passwd(muda sua senha, primeiro sua senha atual em seguida coloque a nova)
+>exit(sair)
+
+>whoami(retorna o usuario, verifica)
+>git clone "link" www(salva o arquivo do git na pasta www)
+>rm -rf *(apaga tudo dentro da pasta)
