@@ -122,7 +122,7 @@ function escapar($texto){
 
     </div>
 
-    <h2>$mensagem</h2>
+    <h2><? $mensagem ?> </h2>
    <!-- link  https://sabrina315.devlook.xyz/resources/views/projetos/poo2.php -->
 </body>
 </html>
