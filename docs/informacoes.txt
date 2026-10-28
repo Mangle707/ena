@@ -90,3 +90,9 @@ D = DELETE = DELETAR
 
 GUI = Interface por meio de site visual mais iterativa
 CLI = interface por linhas de comando
+
+//__________________Sinais LOGICOS caso tenha esquecido_____________________//
+                             || - OU logico 
+                            ===  - o IGUAL logico
+                            && - é o E logico
+                            ! - o NAO logico

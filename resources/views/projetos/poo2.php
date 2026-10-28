@@ -63,6 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     $tipo = $_POST["tipo"] ?? "";
     $quantidade = $_POST["quantidade"] ?? null;
     
+
+    //se nao ouver nada escrito nestes campos
+    //vai exibir a varivael $mensagem a baixo
     if($nome === "" || $quantidade === false || $quantidade <= 0){
 
         $mensagem = "preencha os campos corretamente!";
@@ -72,11 +75,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
           if($tipo === "esteira"){
             $maquina = new Esteira($nome);
           }
-          else if ($tipo == "prensa"){
+          else if ($tipo === "prensa"){
 
             $maquina = new Prensa($nome);
           }
-          else if ($tipo == "Robo Soldagem"){
+          else if ($tipo === "robosoldagem"){
 
             $maquina = new RoboSoldagem($nome);
           }
@@ -88,8 +91,38 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
           $mensagem = "Maquina cadastrada com sucesso!";
     }
-
-    
 }
 
+// Evitar interpretar textos com HTML
+function escapar($texto){
+    return htmlspecialchars(//reconhece os caracteres especiais
+        (string) $texto,
+        ENT_QUOTES,
+        "UTF-8");
+}
 ?>
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUÇAO INDUSTRIAL</title>
+</head>
+<body>
+    <div class container>
+    <form action="" methot="POST">
+    <label for= "nome">Seu nome:</label>
+    <input type="text" id="nome" placeholder="Digite o seu nome: " name="nome">
+    <label for= "nome">Tipo da maquina:</label>
+    <input type="text" id="tipo" placeholder="esteira, prensa, robosoldagem" name="tipo">
+    <label for= "nome">Quantidade:</label>
+    <input type="number" id="quantidade" placeholder="Digite a quantidade de maquinas: " name="quantidade">
+    <button>Enviar</button>
+    </form>
+
+    </div>
+
+    <h2>$mensagem</h2>
+   <!-- link  https://sabrina315.devlook.xyz/resources/views/projetos/poo2.php -->
+</body>
+</html>
