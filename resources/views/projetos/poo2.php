@@ -122,11 +122,11 @@ function escapar($texto){
 
     </div>
 
-    
-    <h2><?$mensagem ?? ""?> </h2>
-    <p>Nome:<?$nome ?? ""?></p>
-    <p>Tipo:<?$tipo ?? ""?></p>
-    <p>Quantidade:<?$quantidade ?? ""?></p>
+   
+    <h2><?=$mensagem ?> </h2>
+    <p>Nome:<?=$nome ?></p>
+    <p>Tipo:<?=$tipo ?></p>
+    <p>Quantidade:<?=$quantidade?></p>
    <!-- link  https://sabrina315.devlook.xyz/resources/views/projetos/poo2.php -->
 
 </body>
