@@ -28,7 +28,7 @@ return [
           'poo' => [new PooController(), 'index'],
           'poo2' => [new Poo2Controller(), 'index'],
           
-          'helpdesk' => [new HelpdeskController(), 'helpdesk'],
+          'helpdesk' => [new HelpdeskController(), 'index'],
 
      ],   
         'POST' => [
