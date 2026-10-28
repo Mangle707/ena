@@ -250,6 +250,28 @@
                > Ver projeto <
            </a>
          </div>
+
+         <div class="projeto-card">
+           <div class="projeto-numero">
+               08
+           </div>
+           <h3>Atividades POO </h3>
+           <p>
+           Aqui segue as atividades de POO = Programacao Orientada Objetos, 
+           1 e como se fosse um jogo e 2 é um Sistema Controle De Produçao Industrial.
+           </p>
+           <div class="tecnologias">
+               <span>HTML</span>
+               <span>CSS</span>
+               <span>PHP</span>
+           </div>
+           <a href="/index.php?rota=poo" class="link-projeto">
+               > Ver projeto 1 <
+           </a>
+           <a href="/index.php?rota=poo2" class="link-projeto">
+               > Ver projeto 2 <
+           </a>
+         </div>
          
         </div>
     </section>

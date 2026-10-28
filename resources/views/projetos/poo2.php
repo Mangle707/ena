@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
             $maquina = new Prensa($nome);
           }
-          else if ($tipo === "robosoldagem"){
+          else if ($tipo === "robo soldagem"){
 
             $maquina = new RoboSoldagem($nome);
           }
@@ -107,6 +107,7 @@ function escapar($texto){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODUÇAO INDUSTRIAL</title>
+    <link rel="stylesheet" href="../resources/css/poo2.css">
 </head>
 <body>
     <div class container>
@@ -114,7 +115,7 @@ function escapar($texto){
     <label for= "nome">Nome da maquina:</label>
     <input type="text" id="nome" placeholder="Digite o nome da maquina: " name="nome">
     <label for= "nome">Tipo da maquina:</label>
-    <input type="text" id="tipo" placeholder="esteira, prensa, robosoldagem" name="tipo">
+    <input type="text" id="tipo" placeholder="esteira, prensa, robo soldagem" name="tipo">
     <label for= "nome">Quantidade:</label>
     <input type="number" id="quantidade" placeholder="Digite a quantidade de maquinas: " name="quantidade">
     <button type="submit">Enviar</button>
