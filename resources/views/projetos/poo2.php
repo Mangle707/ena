@@ -122,7 +122,7 @@ function escapar($texto){
 
     </div>
 
-    <?php if ($maquina != ""){?>
+    <?php if ($mensagem != ""){?>
     <h2><? $mensagem ?> </h2>
     <p>Nome:<? $nome ?></p>
     <p>Tipo:<? $tipo ?></p>
