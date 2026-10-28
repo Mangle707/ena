@@ -1,3 +1,4 @@
+/* Importação corrigida da fonte Inter do Google */
 @import url('https://googleapis.com');
 
 /* Paleta de cores do portfólio */
@@ -30,6 +31,7 @@ h1 {
     margin-bottom: 30px;
     text-transform: uppercase;
     font-size: 1.8rem;
+    text-align: center;
 }
 
 /* Container centralizado do formulário */
@@ -54,6 +56,7 @@ label {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--texto-cinza);
+    text-align: left;
 }
 
 input {
@@ -69,7 +72,8 @@ input {
 
 input:focus {
     outline: none;
-    border-color: var(--cor-vinho);
+    border-color: var(--cor-vinho-hover);
+    box-shadow: 0 0 0 2px rgba(143, 31, 49, 0.2);
 }
 
 button {
@@ -83,6 +87,7 @@ button {
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
     margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
@@ -93,7 +98,7 @@ button:active {
     transform: scale(0.98);
 }
 
-/* Container de resposta (Estilo bloco de projeto) */
+/* Container de resposta (Estilo bloco de projeto igual ao card 08 da imagem) */
 .resultado-container {
     margin-top: 30px;
     width: 100%;

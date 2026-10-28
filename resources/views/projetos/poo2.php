@@ -110,7 +110,8 @@ function escapar($texto){
     <link rel="stylesheet" href="../resources/css/poo2.css">
 </head>
 <body>
-    <div class container>
+    <h1>Controle de Produçao</h1>
+    <div class= "container">
     <form action="" method="POST">
     <label for= "nome">Nome da maquina:</label>
     <input type="text" id="nome" placeholder="Digite o nome da maquina: " name="nome">
@@ -123,12 +124,16 @@ function escapar($texto){
 
     </div>
 
-   
+   <?php if ($mensagem !==""): ?>
+    <div class="resultado-container">
     <h2><?=$mensagem ?> </h2>
+    <div class="card-projeto">
     <p>Nome:<?=$nome ?></p>
     <p>Tipo:<?=$tipo ?></p>
     <p>Quantidade:<?=$quantidade?></p>
    <!-- link  https://sabrina315.devlook.xyz/resources/views/projetos/poo2.php -->
-
+       </div>
+     </div>
+   <?php endif; ?>
 </body>
 </html>
