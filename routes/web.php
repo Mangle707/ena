@@ -24,6 +24,7 @@ return [
           'jogos' => [new JogosController(), 'index'],
           'login-basico' => [new LoginController(), 'index'],
           'Json' => [new JsonController(), 'index'],
+
           'poo' => [new PooController(), 'index'],
           'poo2' => [new Poo2Controller(), 'index'],
           
@@ -39,7 +40,7 @@ return [
               'NotasDesafio' => [new NotasDController(), 'index'],
               'jogos' => [new JogosController(), 'index'],
               'Json' => [new JsonController(), 'index'],
-              'poo2' => [new Poo2Controller(), 'index'],
+              //'poo2' => [new Poo2Controller(), 'index'],
               ]
 ];
 
