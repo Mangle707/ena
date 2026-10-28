@@ -59,3 +59,31 @@ D = DELETE = DELETAR
 
    //SERVE PARA ENTENDER CARACTERES DENTRO DO ARRAY
   JSON_UNESCAPE_UNICODE 
+=======================================================================
+
+
+           Exemplo com POO (Melhor e mais organizado)
+
+                           \ENCAPSULAMENTO/
+//Proteger informaçoes para que nao sejam alteradas de qualquer jeito.
+                             \HERANÇA/
+//Criar uma classe nova aproveitando caracteristicas de outra
+                           \POLIMORFISMO/
+//Permitir que objetos diferentes respondam a mesma acao de maneiras diferentes.
+                            \ABSTRACAO/
+//Mostrar o que é necessario e esconder detalhes complicados de funcionamento.
+//____________________________________________________________//
+
+//________________________________________________________________//
+                    (1) o que é um classe?
+                   -->um molde para criar objetos
+
+               (2) o que significa new personagem()?
+               -->criar um objeto da classe personagem
+
+                    (3) para que serve $this->nome?
+                    -->Acessar o nome do objeto atual
+
+                (4) o que significa extends?
+                -->Herdar caracteristicas e metodos de outra classe
+//_________________________________________________________________//

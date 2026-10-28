@@ -69,6 +69,8 @@ abstract class Personagem {
     abstract public function atacar();
 }
 //--------------------------------------------------------------//
+
+//    ISSO FOI SUBISTITUIDO PELO LAÇO DO FOREACH NA LINHA 123
 //$sabrina = new Personagem("sabrina", 100, 10);
 
 //$sabrina->setVida(20);//exemplo de alteracao de vida
@@ -117,8 +119,9 @@ $curandeiro = new Curandeiro("Sara", 100, 5);
 
 $personagens = [$guerreiro,$mago,$curandeiro];
 
+//laço para todos os personagens atacarem
 foreach($personagens as $p){
-    $p->atacar();//laço para todos os personagens atacarem
+    $p->atacar();
 }
 
 $curandeiro->curar($guerreiro,50);//aqui ele vai curar o guerreiro
