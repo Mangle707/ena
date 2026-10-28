@@ -117,12 +117,14 @@ function escapar($texto){
     <input type="text" id="tipo" placeholder="esteira, prensa, robosoldagem" name="tipo">
     <label for= "nome">Quantidade:</label>
     <input type="number" id="quantidade" placeholder="Digite a quantidade de maquinas: " name="quantidade">
-    <button>Enviar</button>
+    <button type="submit">Enviar</button>
     </form>
 
     </div>
 
     <h2><? $mensagem ?> </h2>
+    <p>Nome:<? $nome ?></p>
+    <p>Quantidade:<?$quantidade?></p>
    <!-- link  https://sabrina315.devlook.xyz/resources/views/projetos/poo2.php -->
 </body>
 </html>
