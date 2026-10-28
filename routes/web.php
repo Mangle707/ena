@@ -25,7 +25,7 @@ return [
           'login-basico' => [new LoginController(), 'index'],
           'Json' => [new JsonController(), 'index'],
 
-          //'poo' => [new PooController(), 'index'],
+          'poo' => [new Poo2Controller(), 'index2'],
           'poo2' => [new Poo2Controller(), 'index'],
           
           'helpdesk' => [new HelpdeskController(), 'index'],
