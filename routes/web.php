@@ -9,8 +9,8 @@ require_once __DIR__ . '/../app/Http/Controllers/LoginController.php';
 require_once __DIR__ . '/../app/Http/Controllers/JogosController.php';
 require_once __DIR__ . '/../app/Http/Controllers/JsonController.php';
 require_once __DIR__ . '/../app/Http/Controllers/HelpdeskController.php';
-require_once __DIR__ . '/../app/Http/Controllers/PooController.php';
-require_once __DIR__ . '/../app/Http/Controllers/Poo2Controller.php';
+//require_once __DIR__ . '/../app/Http/Controllers/PooController.php';
+//require_once __DIR__ . '/../app/Http/Controllers/Poo2Controller.php';
 
 //Listando em arrays as rotas que vamos criar.
 return [
