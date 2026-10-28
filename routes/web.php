@@ -9,7 +9,7 @@ require_once __DIR__ . '/../app/Http/Controllers/LoginController.php';
 require_once __DIR__ . '/../app/Http/Controllers/JogosController.php';
 require_once __DIR__ . '/../app/Http/Controllers/JsonController.php';
 require_once __DIR__ . '/../app/Http/Controllers/HelpdeskController.php';
-//require_once __DIR__ . '/../app/Http/Controllers/PooController.php';
+require_once __DIR__ . '/../app/Http/Controllers/Poo1Controller.php';
 require_once __DIR__ . '/../app/Http/Controllers/Poo2Controller.php';
 
 //Listando em arrays as rotas que vamos criar.
@@ -25,7 +25,7 @@ return [
           'login-basico' => [new LoginController(), 'index'],
           'Json' => [new JsonController(), 'index'],
 
-          'poo' => [new Poo2Controller(), 'index2'],
+          'poo' => [new Poo1Controller(), 'index'],
           'poo2' => [new Poo2Controller(), 'index'],
           
           'helpdesk' => [new HelpdeskController(), 'index'],
