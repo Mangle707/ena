@@ -87,3 +87,6 @@ D = DELETE = DELETAR
                 (4) o que significa extends?
                 -->Herdar caracteristicas e metodos de outra classe
 //_________________________________________________________________//
+
+GUI = Interface por meio de site visual mais iterativa
+CLI = interface por linhas de comando

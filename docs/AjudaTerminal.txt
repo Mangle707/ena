@@ -34,3 +34,8 @@ ________________________________________________________________________
 >whoami(retorna o usuario, verifica)
 >git clone "link" www(salva o arquivo do git na pasta www)
 >rm -rf *(apaga tudo dentro da pasta)
+
+>composer create-project laravel/laravel"10.*"
+(Criar um projeto PHP usando o laravel)
+
+>deploy.sh php  (aparece no seu site nos servidores de navegadores por meio do link acima)
