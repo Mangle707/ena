@@ -9,7 +9,7 @@ require_once __DIR__ . '/../app/Http/Controllers/LoginController.php';
 require_once __DIR__ . '/../app/Http/Controllers/JogosController.php';
 require_once __DIR__ . '/../app/Http/Controllers/JsonController.php';
 require_once __DIR__ . '/../app/Http/Controllers/HelpdeskController.php';
-//require_once __DIR__ . '/../app/Http/Controllers/PooController.php';
+require_once __DIR__ . '/../app/Http/Controllers/PooController.php';
 //require_once __DIR__ . '/../app/Http/Controllers/Poo2Controller.php';
 
 //Listando em arrays as rotas que vamos criar.
@@ -25,7 +25,7 @@ return [
           'login-basico' => [new LoginController(), 'index'],
           'Json' => [new JsonController(), 'index'],
 
-          //'poo' => [new PooController(), 'index'],
+          'poo' => [new PooController(), 'index'],
           //'poo2' => [new Poo2Controller(), 'index'],
           
           'helpdesk' => [new HelpdeskController(), 'index'],
@@ -34,12 +34,12 @@ return [
         'POST' => [
               'helpdesk' => [new HelpdeskController(), 'salvar'],    
 
-             // 'login-basico' => [new LoginController(), 'index'],//teste 'SUCESSO'
-             // 'idade' => [new IdadeController(), 'index'],
-             // 'notas' => [new NotasController(), 'index'],
-              //'NotasDesafio' => [new NotasDController(), 'index'],
-              //'jogos' => [new JogosController(), 'index'],
-              //'Json' => [new JsonController(), 'index'],
+             'login-basico' => [new LoginController(), 'index'],//teste 'SUCESSO'
+              'idade' => [new IdadeController(), 'index'],
+             'notas' => [new NotasController(), 'index'],
+              'NotasDesafio' => [new NotasDController(), 'index'],
+              'jogos' => [new JogosController(), 'index'],
+              'Json' => [new JsonController(), 'index'],
               //'poo2' => [new Poo2Controller(), 'index'],
               ]
 ];
