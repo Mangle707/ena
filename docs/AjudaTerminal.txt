@@ -1,5 +1,5 @@
 --------------------ENTRADA NO TERMINAL---------------------------
-ssh sabrina315@193.111.116.99
+ssh sabrina315@194.61.238.119
 senha:56#########
 site:https://sabrina315.devlook.xyz/
 
