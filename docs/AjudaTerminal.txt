@@ -3,12 +3,23 @@ ssh sabrina315@194.61.238.119
 senha:56#########
 site:https://sabrina315.devlook.xyz/
 
-=================TOKEN SENAI DO GIT=============================
+=================TOKEN SENAI E GIT COMMIT PELO TERMINAL=============================
 
-No gmail
+------>  Token No gmail
 
+sabrina315@senai:~/www$ php artisan make:controller TesteController
+aqui em cima para criar um novo controler (Make é criar)
+_______________________________________________________________________
+sabrina315@senai:~/www$ git config user.name "Sabrina"
+sabrina315@senai:~/www$ git config user.email "magicline42@gmail.com"
+sabrina315@senai:~/www$ git add .
+sabrina315@senai:~/www$ git commit -m "Novo testeController"
+sabrina315@senai:~/www$ git push origin main
 
+Username for 'https://github.com': magicline42@gmail.com    <-email
+Password for 'https://magicline42%40gmail.com@github.com':  <-senha
 
+E git pull no terminal fora da vps
 
 
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_AJUDA-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
