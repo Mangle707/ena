@@ -1,0 +1,437 @@
+/* ==============================================
+    CONFIGURAÇÕES GERAIS E PALETA DE CORES
+============================================== */
+
+:root {
+    --cor-fundo: #0D0B0C;           /* Preto absoluto - Fundo geral */
+    --cor-destaque-bg: #24171A;     /* Marrom/Preto avermelhado escuro - Headers, Footers e Seções de Destaque */
+    --cor-card: #6D1020;            /* Vinho/Borgonha - Fundo dos cards e caixas */
+    --cor-principal: #D90429;       /* Vermelho vivo - Botões, links ativos e destaques principais */
+    --cor-principal-hover: #6D1020; /* Vinho escuro - Para efeitos de passar o mouse */
+    --cor-texto: #F4F1DE;           /* Off-White/Creme - Texto principal de altíssima legibilidade */
+    --cor-borda: #24171A;           /* Tom escuro sutil para contornos e linhas de divisão */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    transition: all 0.3s ease-in-out;
+}
+
+/* MENU */
+
+header {
+    background-color: var(--cor-destaque-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(244, 241, 222, 0.1);
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.logo {
+    color: var(--cor-texto);
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+
+    list-style: none;
+}
+
+.menu a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: var(--cor-principal);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* ==============================================
+    INÍCIO 
+============================================== */
+
+.inicio {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-destaque-bg);
+    color: var(--cor-texto);
+}
+
+.inicio-conteudo {
+    width: 1100px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.saudacao {
+    color: var(--cor-principal);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.inicio h1 {
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+
+.inicio h2 {
+    font-size: 30px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.inicio-conteudo > p {
+    max-width: 600px;
+    color: #cbd5e1;
+}
+
+.botao {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 12px 25px;
+
+    background-color: var(--cor-principal);
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.botao:hover {
+    background-color: var(--cor-principal-hover);
+}
+
+/* ==============================================
+    SEÇÕES 
+============================================== */
+
+.secao {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.titulo-secao {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--cor-texto);
+}
+
+.subtitulo-secao {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+/* ==============================================
+    SOBRE MIM 
+============================================== */
+
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+/*Minha imagem foto*/
+.foto {
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    border-radius: 50%;
+    background-color: var(--cor-principal);
+    color: white;
+    background-image: url(../images/minhafoto.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+    border: 3px solid var(--cor-card);
+}
+
+.sobre-texto h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.sobre-texto p {
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+
+/* ==============================================
+    SECÇÕES COM FUNDO DIFERENTE
+============================================== */
+
+.secao-destaque {
+    max-width: 100%;
+    background-color: var(--cor-destaque-bg); /* Alterado de verde claro para o tom escuro avermelhado */
+}
+
+.secao-destaque > * {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==============================================
+    HABILIDADES
+============================================== */
+
+.lista-habilidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.habilidade {
+    background-color: var(--cor-card);
+    color: var(--cor-texto);
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(254, 241, 222, 0.1);
+    transition: 0.2s ease;
+}
+
+.habilidade:hover {
+    transform: translateY(-3px);
+    border-color: var(--cor-principal);
+    background-color: var(--cor-destaque-bg);
+}
+
+
+/* ==============================================
+    PROJETOS (FORMATO CARROSSEL)
+============================================== */
+
+.projetos-container {
+    display: flex; 
+    gap: 30px;
+    overflow-x: auto; 
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; 
+    padding: 20px 10px; 
+    margin: 0 -10px; 
+    -webkit-overflow-scrolling: touch;
+}
+
+.projetos-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projetos-container::-webkit-scrollbar-track {
+    background: var(--cor-fundo);
+    border-radius: 10px;
+}
+
+.projetos-container::-webkit-scrollbar-thumb {
+    background: var(--cor-card);
+    border-radius: 10px;
+}
+
+.projetos-container::-webkit-scrollbar-thumb:hover {
+    background: var(--cor-principal);
+}
+
+.projeto-card {
+    background-color: var(--cor-card);
+    color: var(--cor-texto);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(254, 241, 222, 0.05);
+    transition: 0.3s;
+
+    flex: 0 0 calc(33.333% - 20px);
+    flex-shrink: 0; 
+    scroll-snap-align: start; 
+    box-sizing: border-box;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(217, 4, 41, 0.2);
+    border-color: var(--cor-principal);
+}
+
+.projeto-numero {
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--cor-texto); /* Mudado para creme para se destacar no card vinho */
+    margin-bottom: 15px;
+}
+
+.projeto-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.projeto-card p {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+
+/* TECNOLOGIAS UTILIZADAS */
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tecnologias span {
+    background-color: var(--cor-destaque-bg); /* Tags agora usam o fundo escuro */
+    color: var(--cor-texto);                /* Texto das tags em creme */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid rgba(254, 241, 222, 0.1);
+}
+
+/* LINK DO PROJETO */
+
+.link-projeto {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-projeto:hover {
+    text-decoration: underline;
+    color: var(--cor-principal);
+}
+
+
+/* ==============================================
+    CONTATO 
+============================================== */
+
+.contato-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contato-item {
+    background-color: var(--cor-card);
+    width: 280px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(254, 241, 222, 0.05);
+}
+
+.contato-item h3 {
+    color: var(--cor-texto);
+    margin-bottom: 5px;
+}
+
+.contato-item a {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 12px 25px;
+
+    background-color: var(--cor-principal);
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.contato-item a:hover {
+    background-color: var(--cor-principal-hover);
+}
+
+
+/* ==============================================
+    RODAPÉ 
+============================================== */
+
+footer {
+    background-color: var(--cor-destaque-bg);
+    color: #cbd5e1;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgba(244, 241, 222, 0.1);
+}
+
+footer a {
+    color: var(--cor-principal);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

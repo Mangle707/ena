@@ -1,0 +1,129 @@
+/* ==============================================
+    ESTILO DE ALUNOS DARK MODE (CYBER TEAL)
+============================================== */
+:root {
+    --fundo-pagina: #0f172a;   /* Grafite ultra escuro */
+    --fundo-card: #1e293b;     /* Cinza azulado para os blocos */
+    --cor-principal: #0ca5e9;  /* Ciano / Azul Elétrico para títulos */
+    --cor-neon: #22c55e;       /* Verde Neon para destaques e botões */
+    --cor-hover: #16a34a;      /* Verde escuro para hover do botão principal */
+    --cor-deletar: #ef4444;    /* Vermelho para a seção de deletar */
+    --borda: #334155;          /* Linhas divisórias de baixo contraste */
+    --texto: #f8fafc;          /* Texto principal quase branco */
+    --texto-mutado: #94a3b8;   /* Cinza claro para labels */
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--fundo-pagina);
+    color: var(--texto);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+/* CONTAINER DE ALINHAMENTO */
+body > form, body > h2, body > div, .card-aluno {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+/* TÍTULOS DE SEÇÃO */
+h2 {
+    font-size: 20px;
+    color: var(--cor-principal);
+    border-bottom: 1px solid var(--borda);
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* FORMULÁRIOS GERAIS */
+form {
+    background: var(--fundo-card);
+    border: 1px solid var(--borda);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+/* RÓTULOS (LABELS) */
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--texto-mutado);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+/* CAIXAS DE ENTRADA (INPUTS) */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--borda);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #0f172a; /* Inputs escuros */
+    color: var(--texto);
+    outline: none;
+    margin-bottom: 15px; /* Espaço até o próximo campo */
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: var(--cor-principal);
+}
+
+/* BOTÕES GERAIS DOS FORMULÁRIOS */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--cor-neon);
+    color: #0f172a;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--cor-hover);
+}
+
+/* SEÇÃO ESPECÍFICA DE DELETAR (Mudança de cor temática) */
+h2:last-of-type {
+    color: var(--cor-deletar);
+}
+
+form:last-of-type button[type="submit"] {
+    background-color: var(--cor-deletar);
+    color: white;
+}
+
+form:last-of-type button[type="submit"]:hover {
+    background-color: #b91c1c;
+}
+
+/* CARDS DE EXIBIÇÃO DOS ALUNOS CADASTRADOS */
+.card-aluno {
+    background: var(--fundo-card);
+    border: 1px solid var(--borda);
+    border-left: 4px solid var(--cor-principal);
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.card-aluno h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: var(--texto);
+}
+
+.card-aluno p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: var(--texto-mutado);
+}
