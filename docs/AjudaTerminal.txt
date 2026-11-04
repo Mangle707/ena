@@ -3,6 +3,13 @@ ssh sabrina315@194.61.238.119
 senha:56#########
 site:https://sabrina315.devlook.xyz/
 
+=================TOKEN SENAI DO GIT=============================
+
+No gmail
+
+
+
+
 
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_AJUDA-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
         (1)Se git pull nao funcionar e der ABORTING
