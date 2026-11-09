@@ -9,3 +9,5 @@ Route::get('/', function () {
 
 Route::get('/helpdesk', [HelpdeskController::class, 'index'])->name('helpdesk');
 Route::get('/helpdesk', [HelpdeskController::class, 'salvar'])->name('helpdesk.salvar');
+
+Route::get('/idade', [IdadeController::class, 'index'])->name('idade');
