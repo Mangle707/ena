@@ -4,6 +4,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;//importa a base laravel
+use Illuminate\Http\Request;
+//Illuminate\Http\Request usado para o post para nao dar erro
 class IdadeController extends Controller{
 
     public function index(){
@@ -16,7 +18,7 @@ class IdadeController extends Controller{
     public function calcular(Request $request) {
         // Pegar os dados que vieram do formulário
         $dados = $request->all();
-        return view('projetos.api.idade', ['dados' => $dados]);
+        return view('projetos.idade', ['dados' => $dados]);
     }
 }
 
