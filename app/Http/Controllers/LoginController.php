@@ -1,5 +1,8 @@
 <?php 
+namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;//importa a base laravel
+use Illuminate\Http\Request;
 class LoginController{
 
     public function index(){
