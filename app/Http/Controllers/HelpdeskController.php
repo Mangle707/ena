@@ -1,7 +1,11 @@
 <?php
 
-require_once __DIR__ . "/../../Models/Chamado.php";
-class HelpdeskController{
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+use App\Models\Chamado;
+
+class HelpdeskController extends Controller{
     // GET - Exibir a página do Helpdesk
     public function index(){
 
@@ -12,7 +16,7 @@ class HelpdeskController{
         $mensagem = "";
 
          //caminho para o portfolio.php dentro do Views que ta no resources
-         require __DIR__ . "/../../../resources/views/helpdesk.php";
+         return view('projetos.helpdesk', compact('chamados', 'relatorio', 'mensagem'));
     }
 
 
@@ -56,7 +60,7 @@ class HelpdeskController{
         $chamados = $model->lerChamadas();//de LerChamados vira LerChamadas
         $relatorio = $model->gerarRelatorio();
  
-        require __DIR__ . "/../../../resources/views/projetos/helpdesk.php";
+        return view('projetos.helpdesk', compact('chamados', 'relatorio', 'mensagem'));
     }
 }
 

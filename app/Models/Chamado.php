@@ -1,6 +1,8 @@
 <?php
 
 
+namespace App\Models;
+
 //PERTENCE AO HELPDESK
 class Chamado{
     public function lerChamadas(){
