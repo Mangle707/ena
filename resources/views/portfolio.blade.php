@@ -205,7 +205,7 @@
                <span>PHP</span>
                <span>MySql</span>
            </div>
-           <a href="/index.php?rota=jogos" class="link-projeto">
+           <a href="{{ route('jogos') }}" class="link-projeto">
                > Ver projeto <
            </a>
          </div>
