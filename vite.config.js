@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
     plugins: [
-        laravel({
+        laravel({    //Local de chamada dos CSS no laravel
             input: ['resources/css/app.css', 'resources/js/app.js','resources/css/helpdesk.css',
                 'resources/css/idade.css','resources/css/index.css','resources/css/jogos.css',
                 'resources/css/json.css','resources/css/layout.css','resources/css/loginbasico.css','resources/css/notas.css','resources/css/poo2.css'],
