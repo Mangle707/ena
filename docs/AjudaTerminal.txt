@@ -73,4 +73,6 @@ Password for 'https://magicline42%40gmail.com@github.com':  <-senha
 
 E git pull no terminal fora da vps
 
+php artisan optimize:clear (para limpar o cache do terminal)
+
 
