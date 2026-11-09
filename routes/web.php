@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelpdeskController;
+use App\Http\Controllers\IdadeController;//import
 
 Route::get('/', function () {
     return view('portfolio');
