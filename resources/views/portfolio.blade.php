@@ -165,7 +165,7 @@
                <span>CSS</span>
                <span>PHP</span>
            </div>
-           <a href="/index.php?rota=NotasDesafio" class="link-projeto">
+           <a href="{{ route('notasD') }}" class="link-projeto">
                > Ver projeto <
            </a>
          </div>
