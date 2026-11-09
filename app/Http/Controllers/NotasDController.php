@@ -8,12 +8,12 @@ class NotasDController{
 
     public function index(){
         //caminho para o portfolio.php dentro do Views que ta no resources
-        return view('projetos.notasD');//mudado aqui
+        return view('projetos.NotasDesafio');//mudado aqui
     }
     public function calcular(Request $request) {
         // Pegar os dados que vieram do formulário
         $dados = $request->all();
-        return view('projetos.notasD', ['dados' => $dados]);
+        return view('projetos.NotasDesafio', ['dados' => $dados]);
     }
 }
 
