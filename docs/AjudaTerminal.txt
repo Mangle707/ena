@@ -5,11 +5,13 @@ site:https://sabrina315.devlook.xyz/
 
 =================TOKEN SENAI E GIT COMMIT PELO TERMINAL=============================
 
------->  Token No gmail
+------>  Token no github>profile>settings>developerSettings>Tokens classic
 
 sabrina315@senai:~/www$ php artisan make:controller TesteController
 aqui em cima para criar um novo controler (Make é criar)
 _______________________________________________________________________
+nano .env (para abrir o terminal de configuraçao laravel)
+
 sabrina315@senai:~/www$ git config user.name "Sabrina"
 sabrina315@senai:~/www$ git config user.email "magicline42@gmail.com"
 sabrina315@senai:~/www$ git add .
@@ -20,6 +22,9 @@ Username for 'https://github.com': magicline42@gmail.com    <-email
 Password for 'https://magicline42%40gmail.com@github.com':  <-senha
 
 E git pull no terminal fora da vps
+
+
+
 
 
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_AJUDA-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

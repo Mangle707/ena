@@ -21,7 +21,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade idade(1)</title>
-     <link rel="stylesheet" href="../resources/css/idade.css">
+    @vite(['resources/css/idade.css'])<!--Trocado para procurar o css no arquivo vite-->
     
 </head>
 <body>  

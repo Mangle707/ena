@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Delta</title>
-    @vite(['resources/css/index.css'])
+    @vite(['resources/css/index.css'])<!--Trocado para procurar o css no arquivo vite-->
 </head>
 
 <body>  
