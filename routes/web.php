@@ -11,4 +11,7 @@ Route::get('/', function () {
 Route::get('/helpdesk', [HelpdeskController::class, 'index'])->name('helpdesk');
 Route::get('/helpdesk', [HelpdeskController::class, 'salvar'])->name('helpdesk.salvar');
 
+//Rota GET
 Route::get('/idade', [IdadeController::class, 'index'])->name('idade');
+// NOVA ROTA (POST)
+Route::post('/idade', [IdadeController::class, 'calcular'])->name('idade.calcular');
