@@ -5,6 +5,13 @@ $caminho = storage_path('data/dados.json');
 $caminho = storage_path('app/data/dados.json');
 $json = file_get_contents($caminho);
 
+// VERIFICA SE O ARQUIVO EXISTE ANTES DE LER
+if (file_exists($caminho)) {
+    $json = file_get_contents($caminho);
+    $alunos = json_decode($json, true) ?? [];
+} else {
+    $alunos = [];
+}
 // 2. ABRIR/LER ARQUIVOS
 $json = file_get_contents($caminho);
 
