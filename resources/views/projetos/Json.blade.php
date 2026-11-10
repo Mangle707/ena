@@ -1,7 +1,9 @@
 <?php
 
 //1. DECLARA O CAMINHO DO ARQUIVO JSON
-$caminho = __DIR__ . "/../../../storage/data/dados.json";
+$caminho = storage_path('data/dados.json');
+$caminho = storage_path('app/data/dados.json');
+$json = file_get_contents($caminho);
 
 // 2. ABRIR/LER ARQUIVOS
 $json = file_get_contents($caminho);
