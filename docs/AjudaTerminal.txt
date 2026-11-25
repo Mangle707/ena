@@ -61,7 +61,7 @@ DB_DATABASE=sabrina315
 DB_USERNAME=seu_usuario  # Certifique-se de que o usuário está correto
 DB_PASSWORD=sua_senha    # Certifique-se de que a senha está correta
 
-=======================================================================
+==================COMMIT PELO VSC COM LARAVEL============================
 sabrina315@senai:~/www$ git config user.name "Sabrina"
 sabrina315@senai:~/www$ git config user.email "magicline42@gmail.com"
 sabrina315@senai:~/www$ git add .
@@ -69,10 +69,22 @@ sabrina315@senai:~/www$ git commit -m "Novo testeController"
 sabrina315@senai:~/www$ git push origin main
 
 Username for 'https://github.com': magicline42@gmail.com    <-email
-Password for 'https://magicline42%40gmail.com@github.com':  <-senha
+Password for 'https://magicline42%40gmail.com@github.com':  <-senha (Token no git)
 
 E git pull no terminal fora da vps
 
 php artisan optimize:clear (para limpar o cache do terminal)
+
+
+_______________________________________________________________________
+ALTEREI COISAS NO COMPUTADOR:
+GIT COMMIT E GIT PUSH PELO GITHUB DESKTOP
+DEPOIS GIT PULL NA VPS
+_______________________________________________________________________
+ALTEREI COISAS NA VPS:
+GIT ADD . | GIT COMMIT -M "" | GIT PUSH ORIGIN MAIN
+DEPOIS:
+GIT PULL NO COMPUTADOR
+_______________________________________________________________________
 
 
